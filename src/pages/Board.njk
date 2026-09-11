@@ -1,23 +1,50 @@
 ---
 title: Editorial Board
-layout: layouts/page.njk
-navKey: board
-heading: Editorial Board
-subtitle: >-
-  Our esteemed Editorial Team guides Khair Publications in scholarship,
-  dialogue, and publishing excellence.
+navKey: team
+layout: null
 description: >-
-  The Khair Publications editorial board brings together scholars of Islamic
-  studies, regional security, Oriental studies, and Urdu literature.
+  The editorial board now appears on the Our Team page.
+eleventyExcludeFromCollections: true
 ---
-{% from "components/person-card.njk" import personCard %}
-
-<section class="container mb-5">
-  <div class="row g-4">
-    {% for member in board %}
-    <div class="col-md-6" data-aos="fade-up">
-      {{ personCard(member) }}
-    </div>
-    {% endfor %}
-  </div>
-</section>
+{#
+  The Editorial Board page was merged into Our Team. This stub keeps the old
+  /Board.html URL working for inbound links and search results, which
+  GitHub Pages cannot redirect server-side. Delete it once the old URL has
+  dropped out of circulation.
+#}
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editorial Board | {{ site.name }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="{{ site.url }}/our-team.html#editorial-board">
+  <meta http-equiv="refresh" content="0; url=/our-team.html#editorial-board">
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background-color: #137a06;
+      color: #fff;
+      font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    a { color: #ffc107; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>This page has moved</h1>
+    <p>
+      The Editorial Board is now part of
+      <a href="/our-team.html#editorial-board">Our Team</a>.
+    </p>
+  </main>
+</body>
+</html>

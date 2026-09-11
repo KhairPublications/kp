@@ -2,7 +2,8 @@
 title: Our Team
 navKey: team
 description: >-
-  Meet the patron, founder, and team behind Khair Publications.
+  Meet the patron, founder, editorial board, and team behind Khair
+  Publications.
 ---
 {% from "components/person-card.njk" import personCard, profileCard %}
 
@@ -11,6 +12,7 @@ description: >-
   <hr class="border-warning border-2 opacity-100 mx-5 mb-5">
 </section>
 
+{# Patron-in-Chief, then the Founder. #}
 <section class="container mb-5">
   {% for leader in team.leadership %}
   <h2 class="text-center text-light-custom mb-5">{{ leader.sectionHeading }}</h2>
@@ -25,7 +27,29 @@ description: >-
   {% endfor %}
 </section>
 
-<section class="container mb-5">
+{# Editorial Board, previously its own page. #}
+<section class="container mb-5" id="editorial-board">
+  <h2 class="text-center text-light-custom mb-3">Editorial Board</h2>
+  <p class="subtitle text-center mx-auto mb-5" style="max-width: 780px;">
+    Our esteemed Editorial Team guides {{ site.name }} in scholarship,
+    dialogue, and publishing excellence.
+  </p>
+
+  <div class="row g-4">
+    {% for member in board %}
+    <div class="col-md-6" data-aos="fade-up">
+      {{ personCard(member) }}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<hr class="border-warning border-2 opacity-100 mx-5 mb-5">
+
+{# Operating team. #}
+<section class="container mb-5" id="team">
+  <h2 class="text-center text-light-custom mb-5">Our Team</h2>
+
   <div class="row g-4 justify-content-center">
     {% for member in team.members %}
     <div class="col-md-5" data-aos="{{ member.animation }}">

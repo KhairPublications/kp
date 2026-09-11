@@ -21,7 +21,7 @@ description: >-
 
     <div class="w-100 text-center overflow-hidden" aria-hidden="true">
       <div class="syne-font hero-title text-yellow" data-aos="fade-up">Khair</div>
-      {% for delay in [60, 120, 180] %}
+      {% for delay in [40, 80, 120] %}
       <div class="syne-font hero-title hero-bg-text" data-aos="fade-up" data-aos-delay="{{ delay }}">Khair</div>
       {% endfor %}
     </div>
@@ -91,8 +91,8 @@ description: >-
   <div class="container position-relative h-100">
     <div class="position-absolute top-0 start-100 translate-middle-x" aria-hidden="true">
       <div class="syne-font section-title" data-aos="fade-up">Publications</div>
-      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="100">Publications</div>
-      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="100">Publications</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="50">Publications</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="50">Publications</div>
     </div>
 
     <div class="container">
@@ -121,8 +121,8 @@ description: >-
   <div class="container overflow-hidden">
     <div class="position-absolute top-0 start-50 translate-middle-x" aria-hidden="true">
       <div class="syne-font section-title text-yellow" data-aos="fade-up">Interests</div>
-      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="60">Interests</div>
-      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="120">Interests</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="40">Interests</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="80">Interests</div>
     </div>
 
     <div class="row">
@@ -155,7 +155,7 @@ description: >-
   <div class="container position-relative">
     <h2 class="text-yellow content-title text-center mb-5" data-aos="fade-up">Our Work</h2>
 
-    <div class="swiper worksSwiper mb-4" data-aos="fade-up" data-aos-delay="200">
+    <div class="swiper worksSwiper mb-4" data-aos="fade-up" data-aos-delay="60">
       <div class="swiper-wrapper">
         {% for book in books %}
         <div class="swiper-slide">{{ bookCard(book, site, "slide") }}</div>
@@ -189,7 +189,7 @@ description: >-
 
     <div class="row g-4 mt-4">
       {% for photo in seminar.highlights %}
-      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 50 }}">
         {{ photoCard(photo, photo.href, photo.linkTitle, "(max-width: 600px) 300px, 400px", true) }}
       </div>
       {% endfor %}
