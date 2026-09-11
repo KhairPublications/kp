@@ -1,0 +1,44 @@
+{
+  "leadership": [
+    {
+      "name": "Pir Mufti Khair Muhammad Bhorvi",
+      "title": "Patron-in-Chief",
+      "sectionHeading": "Patron-in-Chief",
+      "image": "/assets/images/team/chairman.jpg",
+      "bio": "Pir Mufti Khair Muhammad Bhorvi is the Patron-in-Chief of Darbar-e-Aalia Naqshbandia Mujaddadia Bhor Sharif (Mianwali) and a distinguished author of numerous scholarly works. His guidance anchors the organization in traditional Sufi values while actively supporting contemporary intellectual pursuits in Islamic thought, interfaith dialogue, and the promotion of peace and harmony. Under his spiritual leadership, Khair Publications continues to bridge classical spirituality with modern scholarship, fostering an inclusive and enlightened approach to religious understanding."
+    },
+    {
+      "name": "Sahibzada Muhammad Saeed",
+      "title": "Founder & Executive Director",
+      "sectionHeading": "Our Team",
+      "image": "/assets/images/team/saeedsbh.jpg",
+      "bio": "Sahibzada Muhammad Saeed is the Founder of Khair Publications, an initiative committed to bridging classical intellectual traditions with contemporary academic research. He actively contributes to public discourse on interfaith dialogue and Islamic educational development through both scholarly and community-oriented platforms."
+    }
+  ],
+  "members": [
+    {
+      "name": "Muhammad Haris Saleem",
+      "title": "Deputy Director of Publishing & Strategic Operations",
+      "image": "/assets/images/team/Harisimage.jpg",
+      "animation": "fade-right"
+    },
+    {
+      "name": "Muhammad Hamza",
+      "title": "Deputy Director of Content & Research",
+      "image": "/assets/images/team/Hamza.png",
+      "animation": "fade-left"
+    },
+    {
+      "name": "Muhammad Jawad",
+      "title": "Deputy Director of Marketing & Communications",
+      "image": "/assets/images/team/Jawad.png",
+      "animation": "fade-left"
+    },
+    {
+      "name": "Muhammad Bilal",
+      "title": "Research Officer",
+      "image": "/assets/images/team/bilal.png",
+      "animation": "fade-up"
+    }
+  ]
+}

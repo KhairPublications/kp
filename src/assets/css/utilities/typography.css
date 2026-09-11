@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Display type
+   Sizes are fluid, so the former per-breakpoint overrides are unnecessary.
+   ========================================================================== */
+
+.syne-font {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.8em;
+}
+
+.hero-title {
+  font-size: var(--step-hero);
+  letter-spacing: 2.38px;
+  line-height: 0.8em;
+}
+
+.hero-bg-text {
+  -webkit-text-stroke: 2px rgba(226, 219, 201, 0.3);
+  color: transparent;
+}
+
+.section-title {
+  font-size: var(--step-section);
+  letter-spacing: 1.6px;
+  -webkit-text-stroke: 2px rgba(65, 76, 49, 0.2);
+  color: var(--secondary-color);
+}
+
+.section-title-bg {
+  -webkit-text-stroke: 2px rgba(65, 76, 49, 0.3);
+  color: transparent;
+}
+
+.content-title {
+  font-size: var(--step-content);
+  letter-spacing: -3.45px;
+}
+
+.subtitle {
+  font-size: var(--step-subtitle);
+  letter-spacing: -1.5px;
+}
+
+.date-text {
+  font-size: 1.125rem;
+  letter-spacing: 2.16px;
+  color: var(--text-muted);
+}
+
+.section-header__title {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.section-header__blurb {
+  max-width: 750px;
+}

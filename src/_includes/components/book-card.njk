@@ -1,0 +1,47 @@
+{# Renders one book. `variant` is "store" (full card) or "slide" (carousel). #}
+{% macro bookCard(book, site, variant="store") %}
+<div class="card card-custom book-card h-100 p-4 text-center d-flex flex-column">
+  <div class="book-card__media">
+    <img src="{{ book.image }}" alt="{{ book.imageAlt }}"
+         class="img-fluid rounded shadow-lg" loading="lazy" decoding="async">
+  </div>
+
+  <span class="badge bg-warning text-dark mb-2 py-1 px-2 fw-bold align-self-center">
+    <i class="{{ book.badge.icon }}" aria-hidden="true"></i> {{ book.badge.label }}
+  </span>
+
+  <h3 class="text-yellow mb-2 fw-bold h4">{{ book.title }}</h3>
+
+  {% if book.author %}
+  <p class="text-light-custom mb-1 small">Author: <strong class="text-yellow">{{ book.author }}</strong></p>
+  {% endif %}
+  {% if book.translator %}
+  <p class="text-light-custom mb-2 small">Translation: <strong class="text-yellow">{{ book.translator }}</strong></p>
+  {% endif %}
+  {% if book.price %}
+  <p class="text-light-custom mb-1 small">Price: <strong class="text-yellow">{{ book.price }}</strong></p>
+  {% endif %}
+  {% if book.edition %}
+  <p class="text-light-custom mb-2 small"><strong class="text-yellow">{{ book.edition }}</strong> Edition</p>
+  {% endif %}
+
+  <p class="text-light-custom flex-grow-1 small mb-3">{{ book.description }}</p>
+
+  <div class="d-flex flex-column gap-2 mt-auto pt-2">
+    {% if book.amazonUrl %}
+    <a href="{{ book.amazonUrl }}" target="_blank" rel="noopener noreferrer" class="btn-book-primary w-100">
+      <i class="fab fa-amazon me-2" aria-hidden="true"></i> Buy on Amazon
+    </a>
+    {% else %}
+    <a href="https://wa.me/{{ site.contact.ordersWhatsapp }}?text={{ book.whatsappMessage | urlencode }}"
+       target="_blank" rel="noopener noreferrer" class="btn-book-primary w-100">
+      <i class="fas fa-shopping-cart me-2" aria-hidden="true"></i> Buy Now
+    </a>
+    {% endif %}
+    <a href="https://wa.me/{{ site.contact.ordersWhatsapp }}?text={{ book.whatsappMessage | urlencode }}"
+       target="_blank" rel="noopener noreferrer" class="btn-book-whatsapp w-100">
+      <i class="fab fa-whatsapp me-2" aria-hidden="true"></i> Order via WhatsApp
+    </a>
+  </div>
+</div>
+{% endmacro %}

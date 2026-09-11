@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+---
+<section class="container my-5 text-center">
+  <h1 class="section-title mb-3">{{ heading or title }}</h1>
+  <hr class="border-warning border-2 opacity-100 mx-5 mb-4">
+  {% if subtitle %}<p class="subtitle">{{ subtitle | safe }}</p>{% endif %}
+</section>
+
+{{ content | safe }}

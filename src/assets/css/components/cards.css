@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Cards
+   One base card shared by the team, board, store, and carousel surfaces.
+   ========================================================================== */
+
+.card-custom {
+  background-color: var(--surface-card);
+  border: 1px solid var(--brand-gold-soft);
+  border-radius: var(--radius-lg);
+  color: #fff;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card-img-top {
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+/* Person cards --------------------------------------------------------- */
+
+.person-card__avatar {
+  object-fit: cover;
+  height: 160px;
+  width: 160px;
+}
+
+.profile-card__portrait {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+}
+
+/* Book cards ----------------------------------------------------------- */
+
+.book-card {
+  background: linear-gradient(145deg, var(--brand-green-mid), var(--brand-green-bright));
+  border: 2px solid var(--brand-gold-soft);
+  box-shadow: var(--shadow-elevated);
+}
+
+.book-card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.book-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+  margin-bottom: 1rem;
+}
+
+.book-card__media img {
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--transition-base);
+}
+
+.book-card:hover .book-card__media img {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* Footer links and social icons ---------------------------------------- */
+
+.footer-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 800;
+  transition: all var(--transition-base);
+}
+
+.footer-link:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 1.25rem;
+  transition: all var(--transition-base);
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: var(--secondary-color);
+}
+
+.social-icon--whatsapp {
+  color: var(--brand-whatsapp);
+}

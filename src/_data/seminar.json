@@ -1,0 +1,58 @@
+{
+  "id": "irs-2026",
+  "badge": "National Seminar &bull; IRS Islamabad &bull; Khair Publications",
+  "title": "Ideology of Pakistan and the Role of Islamic Scholars",
+  "poster": "irs_seminar_2026_poster",
+  "posterAlt": "Official Seminar Poster: Ideology of Pakistan and the Role of Islamic Scholars - IRS & Khair Publications",
+  "meta": [
+    { "icon": "far fa-calendar-alt", "label": "Date &amp; Time", "value": "Wednesday, September 02, 2026 &bull; 11:30 AM" },
+    { "icon": "fas fa-location-dot", "label": "Venue", "value": "Institute of Regional Studies (IRS), Ataturk Avenue, F-5/2, Islamabad" },
+    { "icon": "fas fa-handshake", "label": "Organizers", "value": "Jointly organized by <strong>Institute of Regional Studies (IRS)</strong> &amp; <strong>Khair Publications</strong>" },
+    { "icon": "fas fa-microphone-lines", "label": "Keynote Address", "value": "<strong>Sahibzada Muhammad Saeed</strong> (Founder, Khair Publications) on <em>&ldquo;Role of Sufia-e-Karam &amp; Ideology of Pakistan&rdquo;</em>" },
+    { "icon": "fas fa-book-open", "label": "Book Presentation", "value": "Newly translated English editions of <strong>&ldquo;Sufism&rdquo;</strong> and <strong>&ldquo;Truthful Tales&rdquo;</strong> formally presented" }
+  ],
+  "description": [
+    "At the beginning of the seminar, Sahibzada Muhammad Saeed Bhorvi, founder of Khair Publications, addressed the gathering and highlighted the objectives of the seminar and the profound significance of its theme.",
+    "On this occasion, Allama Sahibzada Muhammad Masoom Bhorvi, along with distinguished religious scholars, academics, and intellectuals, participated as special guests. The speakers shared their comprehensive perspectives on the intellectual and ideological background of the creation of Pakistan and the spiritual contributions of Sufi saints in the subcontinent."
+  ],
+  "pressUrl": "https://www.thenews.pk/print/1435496-role-of-ulema-sufis-vital-to-understanding-pakistan-s-ideology",
+  "highlights": [
+    {
+      "image": "irs_seminar_book_launch_stage",
+      "alt": "Stage Book Launch",
+      "icon": "fas fa-book-open",
+      "title": "Book Launch Stage",
+      "caption": "Formal presentation of Sufism &amp; Truthful Tales.",
+      "href": "/events.html#photo-gallery",
+      "linkTitle": "View Book Launch in Gallery"
+    },
+    {
+      "image": "irs_seminar_speech_sms",
+      "alt": "Keynote Speech",
+      "icon": "fas fa-microphone",
+      "title": "Keynote Address",
+      "caption": "Sahibzada Muhammad Saeed addressing the seminar.",
+      "href": "/events.html#photo-gallery",
+      "linkTitle": "View Keynote Address in Gallery"
+    },
+    {
+      "image": "irs_seminar_hall_audience",
+      "alt": "Audience Hall",
+      "icon": "fas fa-users",
+      "title": "Seminar Hall",
+      "caption": "Scholars, researchers, and dignitaries at IRS auditorium.",
+      "href": "/events.html#photo-gallery",
+      "linkTitle": "View Audience Hall in Gallery"
+    },
+    {
+      "image": "the_news_article_cropped",
+      "alt": "The News International Coverage",
+      "icon": "far fa-newspaper",
+      "title": "The News Coverage",
+      "caption": "National print media report by Rasheed Khalid.",
+      "href": "/events.html#press-coverage",
+      "linkTitle": "View The News Coverage",
+      "imageStyle": "object-fit: contain; background: #fff;"
+    }
+  ]
+}

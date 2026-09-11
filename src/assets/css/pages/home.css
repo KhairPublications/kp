@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Home page
+   ========================================================================== */
+
+.banner-content {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 60px;
+}
+
+.banner-image {
+  margin-top: -200px;
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    position: relative;
+    margin-top: 60px;
+  }
+  .banner-image {
+    margin-top: 0;
+  }
+}
+
+.feature-band {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-bg);
+}
+
+.feature-band__scrim {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(5, 141, 17, 0.4);
+  z-index: 0;
+}
+
+.feature-band__body {
+  position: relative;
+  z-index: 2;
+}
+
+.works-band {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-radius: var(--radius-xl);
+}

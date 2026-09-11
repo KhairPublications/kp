@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+<meta name="description" content="{{ description or site.description }}">
+<meta name="keywords" content="{{ site.keywords | join(', ') }}">
+<link rel="canonical" href="{{ page.url | absoluteUrl(site.url) }}">
+
+{# Open Graph / social sharing #}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}">
+{% if socialImage %}<meta property="og:image" content="{{ socialImage | absoluteUrl(site.url) }}">{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+
+{# Speed up the handshake with the third-party asset hosts below #}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{# Vendor stylesheets #}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+{% if useSwiper %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">{% endif %}
+
+{# Project stylesheet: one bundled, minified file for every page #}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | bust }}">
+
+<link rel="icon" href="/assets/images/brand/Bhor.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/brand/Bhor.png">
+<meta name="theme-color" content="#115802">
+
+{# Scroll-reveal animations start hidden. Without JavaScript they would never
+   resolve, so neutralise their initial state entirely. #}
+<noscript>
+  <style>
+    [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      clip-path: none !important;
+    }
+  </style>
+</noscript>

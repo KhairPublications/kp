@@ -1,0 +1,28 @@
+---
+title: Store
+navKey: store
+description: >-
+  Buy books published by Khair Publications on Amazon or order directly
+  via WhatsApp.
+---
+{% from "components/book-card.njk" import bookCard %}
+
+<section class="container my-5 text-center">
+  <h1 class="section-title mb-2">{{ site.name }}</h1>
+  <hr class="border-warning border-2 opacity-100 mx-5 mb-5">
+  <p class="section-title">Store</p>
+</section>
+
+<section class="container my-4 text-center">
+  <p class="subtitle">Buy our latest books directly from our store.</p>
+</section>
+
+<section class="container mb-5">
+  <div class="row g-5 justify-content-center">
+    {% for book in books %}
+    <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+      {{ bookCard(book, site) }}
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,257 @@
+---
+title: Home
+navKey: home
+bodyClass: theme-hero
+useSwiper: true
+description: >-
+  Khair Publications is a creative publishing house dedicated to quality
+  literature, academic research, Sufi thought, and contemporary writing.
+---
+{% from "components/book-card.njk" import bookCard %}
+{% from "components/seminar.njk" import spotlight, photoCard %}
+
+<header class="position-relative">
+  <div class="bg-dark-custom p-2 p-lg-5 m-3 m-lg-4 rounded-4">
+
+    <h1 class="content-title fw-bold text-center mx-auto mb-0" data-aos="fade-right" data-aos-duration="1000">
+      <span class="text-yellow">Khair</span> <span class="text-yellow">Publications</span>
+    </h1>
+
+    <hr class="border-warning border-2 opacity-100 mx-5 mb-5">
+
+    <div class="w-100 text-center overflow-hidden" aria-hidden="true">
+      <div class="syne-font hero-title text-yellow" data-aos="fade-up">Khair</div>
+      {% for delay in [200, 400, 600] %}
+      <div class="syne-font hero-title hero-bg-text" data-aos="fade-up" data-aos-delay="{{ delay }}">Khair</div>
+      {% endfor %}
+    </div>
+
+    <div class="banner-content">
+      <div class="container">
+        <div class="row g-lg-5">
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <div class="panel-green" data-aos="text-reveal-up" data-aos-delay="1000">
+              <div class="swiper servicesSwiper">
+                <div class="swiper-wrapper">
+                  {% set visionPoints = [
+                    "We are a creative publishing house dedicated to publishing quality literature, research, and contemporary writing.",
+                    "Offering a platform for academic theses and researchers in the field of Islamic studies and Social sciences.",
+                    "Promoting deserving thinkers to reach wider audiences worldwide."
+                  ] %}
+                  {% for point in visionPoints %}
+                  <div class="swiper-slide">
+                    <div class="text-yellow content-title fw-bold">Aim &amp; Vision</div>
+                    <p class="text-light-custom mb-4">{{ point }}</p>
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="swiper-pagination text-start"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- About -->
+<section class="py-5 my-5 position-relative">
+  <div class="container">
+    <div class="row g-lg-5">
+      <div class="banner-image col-md-6" data-aos="clip-bottom" data-aos-duration="1000">
+        <img src="/assets/images/brand/logo1.pnj.png" class="img-fluid" alt="Khair Publications logo">
+      </div>
+
+      <div class="col-md-6 panel-green" data-aos="clip-top" data-aos-delay="1000">
+        <h2 class="content-title text-yellow mb-4 fw-bold">{{ site.name }}</h2>
+
+        <blockquote class="fst-italic fs-4 mb-4">
+          &ldquo;Every idea holds wisdom, and every voice deserves to be heard with clarity and grace.&rdquo;
+        </blockquote>
+
+        <ul>
+          <li><strong>We are a creative publishing house dedicated to publishing quality literature, research, and contemporary writing.</strong></li>
+          <li><strong>Continuing a legacy of contributions to the study of Sufism.</strong></li>
+          <li><strong>Spreading authentic Islamic knowledge to global readers.</strong></li>
+          <li><strong>Encouraging inter-faith understanding, deepening spiritual growth, and working towards global peace.</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publications -->
+<section class="py-5 my-5 position-relative overflow-hidden">
+  <div class="container position-relative h-100">
+    <div class="position-absolute top-0 start-100 translate-middle-x" aria-hidden="true">
+      <div class="syne-font section-title" data-aos="fade-up">Publications</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="100">Publications</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="100">Publications</div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 py-5">
+          <div class="panel-green mt-5 rounded-4 overflow-hidden" data-aos="clip-top" data-aos-delay="1000">
+            <h2 class="content-title text-yellow mb-4 fw-bold">Publications</h2>
+
+            {% for book in books %}
+            <div class="{% if loop.last %}mb-0{% else %}mb-5{% endif %}">
+              <div class="date-text mb-2 text-white">{{ book.year }}</div>
+              <h3 class="text-yellow subtitle mb-2">{{ book.longTitle or book.title }}</h3>
+              <p>{{ book.longDescription or book.description }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interests -->
+<section class="py-5 my-5 position-relative">
+  <div class="container overflow-hidden">
+    <div class="position-absolute top-0 start-50 translate-middle-x" aria-hidden="true">
+      <div class="syne-font section-title text-yellow" data-aos="fade-up">Interests</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="200">Interests</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="400">Interests</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 py-5">
+        <div class="panel-green rounded-4" data-aos="clip-bottom" data-aos-duration="1000">
+          <h2 class="text-yellow content-title mb-4 fw-bold">Interests</h2>
+
+          {% set interests = [
+            { name: "Social Sciences", blurb: "Examining human behavior, society, and culture through ethical and intellectual inquiry." },
+            { name: "Contemporary Religious Discussions", blurb: "Engaging with modern spiritual questions through faith-based dialogue and critical thought." }
+          ] %}
+          {% for interest in interests %}
+          <div class="{% if loop.last %}mb-0{% else %}mb-5{% endif %}">
+            <div class="date-text mb-2">Topic</div>
+            <h3 class="text-yellow subtitle mb-2">{{ interest.name }}</h3>
+            <p>{{ interest.blurb }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Our work carousel -->
+<section class="py-5 my-5 position-relative">
+  <div class="bg-light-alt works-band" aria-hidden="true"></div>
+
+  <div class="container position-relative">
+    <h2 class="text-yellow content-title text-center mb-5" data-aos="fade-up">Our Work</h2>
+
+    <div class="swiper worksSwiper mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-wrapper">
+        {% for book in books %}
+        <div class="swiper-slide">{{ bookCard(book, site, "slide") }}</div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination works-swiper-pagination"></div>
+      <div class="works-swiper-next" role="button" tabindex="0" aria-label="Next book"></div>
+      <div class="works-swiper-prev" role="button" tabindex="0" aria-label="Previous book"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured seminar -->
+<section class="py-5 my-5 position-relative overflow-hidden" id="seminar-event">
+  <div class="container position-relative">
+
+    <div class="text-center mb-5 position-relative" data-aos="fade-up">
+      <h2 class="text-yellow content-title fw-bold mb-2">Events &amp; Seminars</h2>
+      <hr class="border-warning border-2 opacity-100 mx-auto mb-3" style="max-width: 180px;">
+      <p class="text-light-custom mx-auto mb-0" style="max-width: 720px; font-size: 1.1rem;">
+        Academic conferences, heritage book presentations, and national dialogues organized by {{ site.name }}.
+      </p>
+    </div>
+
+    {% set homeActions = [
+      { url: "/events.html#event-videos", style: "btn-event-primary",   icon: "fas fa-play",      label: "Watch Event Videos" },
+      { url: "/events.html",              style: "btn-event-secondary", icon: "fas fa-images",    label: "Full Event Coverage &amp; Gallery &rarr;" },
+      { url: seminar.pressUrl,            style: "btn-event-secondary", icon: "far fa-newspaper", label: "Read on The News", external: true }
+    ] %}
+    {{ spotlight(seminar, homeActions) }}
+
+    <div class="row g-4 mt-4">
+      {% for photo in seminar.highlights %}
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+        {{ photoCard(photo, photo.href, photo.linkTitle, "(max-width: 600px) 300px, 400px", true) }}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-4 pt-2">
+      <a href="/events.html" class="btn btn-outline-warning px-4 py-2 rounded-pill fw-semibold">
+        <i class="fas fa-calendar-check me-2" aria-hidden="true"></i> View All Photos, Videos &amp; Press Details &rarr;
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Manuscripts and About bands -->
+{% set bands = [
+  { id: "manuscripts", heading: "Our Manuscripts", href: "/manuscript.html", cta: "Explore Manuscripts",
+    body: "Khair Publications preserves and publishes rare manuscripts that reflect the rich intellectual and spiritual traditions of the Muslim world. These works cover classical literature, Sufi thought, and scholarly contributions that inspire academic research and cultural understanding." },
+  { id: "about", heading: "About Us", href: "/our-team.html", cta: "More About Us",
+    body: "Khair Publications is dedicated to promoting literature, academic research, and Sufi thought. Our mission is to preserve classical heritage while fostering modern discourse in Islamic studies and social sciences." }
+] %}
+
+{% for band in bands %}
+<section class="py-5 feature-band {% if loop.first %}mb-5{% endif %}" data-aos="clip-bottom" id="{{ band.id }}">
+  <div class="feature-band__scrim" aria-hidden="true"></div>
+  <div class="container feature-band__body">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10">
+        <h2 class="content-title text-yellow mb-3">{{ band.heading }}</h2>
+        <p class="text-muted-custom mb-4">{{ band.body }}</p>
+        <a href="{{ band.href }}" class="btn btn-outline-warning px-4 py-2 rounded-pill mt-2 fw-semibold">{{ band.cta }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<!-- Contact CTA -->
+<section class="py-5 my-5 bg-light-alt rounded-5 m-4" data-aos="clip-bottom">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <h2 class="text-yellow content-title mb-4 fw-bold">Leave A Message</h2>
+        <p class="mb-4">
+          We would love to hear from you. Share your questions, ideas, or feedback, and our team will get back to you as
+          soon as possible. Whether you are an author, researcher, or reader, your voice matters to us.
+        </p>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-left">
+        <form class="d-flex flex-column gap-4" action="mailto:{{ site.contact.email }}" method="post" enctype="text/plain">
+          <label class="visually-hidden" for="contact-name">Your name</label>
+          <input id="contact-name" name="name" type="text" class="form-control-custom form-control" placeholder="Your name here..." required>
+
+          <label class="visually-hidden" for="contact-email">Your email</label>
+          <input id="contact-email" name="email" type="email" class="form-control-custom form-control" placeholder="Your email here..." required>
+
+          <label class="visually-hidden" for="contact-message">Your message</label>
+          <textarea id="contact-message" name="message" class="form-control-custom form-control" placeholder="Your message here..." rows="4" required></textarea>
+
+          <button type="submit" class="btn btn-custom d-flex align-items-center justify-content-center gap-2">
+            <span>Send Message</span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

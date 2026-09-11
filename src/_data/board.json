@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Dr. Saeed Ahmad Saeedi",
+    "image": "/assets/images/board/saeed.jpg",
+    "role": "Associate Professor, Islamic Studies",
+    "affiliation": "University of the Punjab, Lahore",
+    "bio": "HEC-approved PhD Supervisor. Expert in Islamic Jurisprudence, Prophetic Biography, and Spiritualism. Founder of Al-Idrak Research Center & Fiqh Academy Pakistan. Author of numerous publications with 22+ years of teaching experience."
+  },
+  {
+    "name": "Dr. Waleed Ziad",
+    "image": "/assets/images/board/Waleed.jpg",
+    "role": "Associate Professor, Religious Studies",
+    "affiliation": "Georgetown University, Qatar",
+    "bio": "Renowned historian of Afghanistan, Central & South Asia, and the Persianate world. Though unable to actively participate due to his busy academic schedule, he graciously serves on our Editorial Board with a special focus on manuscript preservation and archival research."
+  },
+  {
+    "name": "Dr. Rizwan Naseer",
+    "image": "/assets/images/board/Rizwan.jpeg",
+    "role": "Director CCTVES & Senior Research Fellow",
+    "affiliation": "Institute of Regional Studies, Islamabad",
+    "bio": "Expert in peace, security, and countering violent extremism. Former faculty at NUST and COMSATS, with extensive contributions to policy analysis, national security, and foreign policy studies. Trained at the London School of Economics."
+  },
+  {
+    "name": "Eldost Ibrahimov",
+    "image": "/assets/images/board/Eldost.jpg",
+    "role": "Lecturer, Oriental Studies",
+    "affiliation": "Baku State University, Azerbaijan",
+    "bio": "Specialist in Pakistan-India regional studies and Urdu language. Actively engaged in promoting academic and cultural ties between Azerbaijan and South Asia through teaching, research, and public outreach."
+  },
+  {
+    "name": "Prof. Dr. Muhammad Maalik",
+    "image": "/assets/images/board/maalik.jpeg",
+    "role": "Professor of Urdu",
+    "affiliation": "Government Commerce College, Rawalpindi",
+    "bio": "PhD in Urdu. An accomplished scholar with expertise in Urdu literary studies, educational development, and academic leadership, currently serving at Government Commerce College, Rawalpindi."
+  }
+]

@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Page themes
+   Two body treatments replace the five duplicated inline <style> blocks
+   that previously lived in the page templates.
+   ========================================================================== */
+
+/* Photographic background with a green wash, used by the home and events
+   pages. The overlay sits behind content via a fixed pseudo-element. */
+.theme-hero {
+  background-image: url("/assets/images/brand/bhorvi.JPG");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.theme-hero::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--surface-overlay);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .theme-hero {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}
+
+/* Flat brand green, used by the interior content pages. */
+.theme-solid {
+  background-color: var(--brand-green-bright);
+  color: #fff;
+}
+
+/* Interior pages use a quieter heading than the display type on the hero
+   pages: no outline stroke and a much smaller cap. This reproduces the
+   per-page overrides those templates used to declare inline. */
+.theme-solid .section-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: bold;
+  letter-spacing: normal;
+  -webkit-text-stroke: 0;
+  color: var(--brand-gold-strong);
+}
+
+.theme-solid .subtitle {
+  font-size: 1.2rem;
+  letter-spacing: normal;
+  color: #d4fdd1;
+}

@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn-custom {
+  background-color: #fdd052;
+  border: 2px solid var(--text-dark);
+  border-radius: 9px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: all var(--transition-base);
+}
+
+.btn-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-event-primary,
+.btn-event-secondary,
+.btn-book-primary,
+.btn-book-whatsapp {
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-event-primary {
+  background-color: var(--brand-gold-strong);
+  color: var(--brand-green-deep) !important;
+  padding: 10px 22px;
+  border: 2px solid var(--brand-gold-strong);
+}
+
+.btn-event-primary:hover {
+  background-color: var(--brand-gold-dark);
+  border-color: var(--brand-gold-dark);
+  color: #000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-event-secondary {
+  background-color: transparent;
+  color: var(--brand-gold-strong) !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid var(--brand-gold-strong);
+}
+
+.btn-event-secondary:hover {
+  background-color: var(--brand-gold-strong);
+  color: var(--brand-green-deep) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-book-primary {
+  background-color: var(--brand-gold-strong);
+  color: var(--brand-green-deep) !important;
+  border: none;
+  padding: 9px 16px;
+}
+
+.btn-book-primary:hover {
+  background-color: var(--brand-gold-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}
+
+.btn-book-whatsapp {
+  background-color: transparent;
+  color: var(--brand-gold-strong) !important;
+  border: 1px solid var(--brand-gold-strong);
+  padding: 8px 16px;
+}
+
+.btn-book-whatsapp:hover {
+  background-color: var(--brand-gold-strong);
+  color: var(--brand-green-deep) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}
+
+.form-control-custom {
+  background-color: var(--light-bg);
+  border: 2px solid var(--text-dark);
+  border-radius: 9px;
+  height: 76px;
+  font-style: italic;
+}
+
+textarea.form-control-custom {
+  height: auto;
+}

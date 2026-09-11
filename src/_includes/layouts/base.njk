@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+<head>
+  {% include "partials/head.njk" %}
+  {% block extraHead %}{% endblock %}
+</head>
+<body class="{{ bodyClass or 'theme-solid' }}">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  {% include "partials/announcement.njk" %}
+  {% include "partials/navbar.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+  {% include "partials/scripts.njk" %}
+</body>
+</html>

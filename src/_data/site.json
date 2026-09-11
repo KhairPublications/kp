@@ -1,0 +1,31 @@
+{
+  "name": "Khair Publications",
+  "shortName": "Khair",
+  "url": "https://khairpublications.com",
+  "locale": "en",
+  "description": "Khair Publications is a creative publishing house dedicated to quality literature, academic research, Sufi thought, and contemporary writing.",
+  "keywords": [
+    "Khair Publications",
+    "Islamic studies",
+    "Sufism",
+    "academic publishing",
+    "manuscripts",
+    "Pakistan"
+  ],
+  "contact": {
+    "email": "khairpublications@gmail.com",
+    "phoneDisplay": "+92 51 6161615",
+    "phoneHref": "tel:+925161616155",
+    "ordersWhatsapp": "923219841780",
+    "generalWhatsapp": "923336095804"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/profile.php?id=61574118698840",
+    "linkedin": "https://www.linkedin.com/company/khair-publications/posts/?feedView=all",
+    "whatsapp": "https://wa.me/923336095804"
+  },
+  "footer": {
+    "tagline": "Follow us to receive updates on publishing, design, and inspiring releases.",
+    "contactBlurb": "Feel free to contact Khair Publications if you would like to collaborate, publish your work, or simply connect anytime."
+  }
+}

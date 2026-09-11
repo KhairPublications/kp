@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="/index.html">{{ site.name }}</a>
+
+    <button class="navbar-toggler text-yellow" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-ellipsis-v text-yellow" id="menu-icon" aria-hidden="true"></i>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        {% for item in navigation %}
+        <li class="nav-item">
+          <a class="nav-link{% if item.key == navKey %} active{% endif %}"
+             href="{{ item.url }}"
+             {% if item.key == navKey %}aria-current="page"{% endif %}>
+            <i class="{{ item.icon }} me-1" aria-hidden="true"></i> {{ item.label }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

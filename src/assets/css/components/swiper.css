@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Swiper carousels
+   ========================================================================== */
+
+.swiper {
+  padding-bottom: 50px;
+  --swiper-pagination-bottom: 0px;
+}
+
+.swiper-slide {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.servicesSwiper,
+.testimonialsSwiper {
+  --swiper-pagination-color: #fff;
+  --swiper-theme-color: #fff;
+  --swiper-pagination-bullet-inactive-color: #fff;
+}
+
+.swiper-pagination-bullet {
+  width: 26px;
+  height: 26px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all var(--transition-base);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+/* Works carousel ------------------------------------------------------- */
+
+.worksSwiper {
+  padding: 10px 5px 50px !important;
+}
+
+.works-swiper-pagination .swiper-pagination-bullet {
+  background: var(--brand-gold-strong) !important;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  transition: all var(--transition-base);
+}
+
+.works-swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 24px;
+  border-radius: 6px;
+}
+
+.works-swiper-prev,
+.works-swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-gold-strong) !important;
+  width: 44px;
+  height: 44px;
+  background: rgba(13, 109, 0, 0.85);
+  border: 2px solid var(--brand-gold-strong);
+  border-radius: 50%;
+  transition: all var(--transition-base);
+}
+
+.works-swiper-next { right: 10px; }
+.works-swiper-prev { left: 10px; }
+
+.works-swiper-next::after { content: "\203A"; font-size: 1.5rem; font-weight: bold; }
+.works-swiper-prev::after { content: "\2039"; font-size: 1.5rem; font-weight: bold; }
+
+.works-swiper-prev:hover,
+.works-swiper-next:hover {
+  background: var(--brand-gold-strong);
+  color: var(--brand-green-deep) !important;
+  box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
+}
+
+.works-swiper-prev.swiper-button-disabled,
+.works-swiper-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .works-swiper-prev,
+  .works-swiper-next {
+    display: none;
+  }
+}

@@ -1,0 +1,91 @@
+{# Responsive <picture> for a pre-optimized seminar image. #}
+{% macro optimizedImage(name, alt, sizes, extraStyle="", widths=[300,600,1200]) %}
+{%- set base = "/assets/images/seminar/optimized/" + name -%}
+<picture>
+  <source srcset="{{ base }}.avif" type="image/avif">
+  <source srcset="{{ base }}.webp" type="image/webp">
+  <img src="{{ base }}-600.jpg"
+       srcset="{% for w in widths %}{{ base }}-{{ w }}.jpg {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}"
+       sizes="{{ sizes }}"
+       alt="{{ alt }}"
+       {% if extraStyle %}style="{{ extraStyle }}"{% endif %}
+       loading="lazy" decoding="async">
+</picture>
+{% endmacro %}
+
+{# The main event spotlight card, shared by the home page and the events page. #}
+{% macro spotlight(seminar, actions, titleSize="2rem") %}
+<div class="event-spotlight-card" data-aos="zoom-in" data-aos-duration="1000">
+  <div class="row g-4 align-items-center">
+
+    <div class="col-lg-5 col-md-12">
+      <div class="event-poster-container">
+        {{ optimizedImage(seminar.poster, seminar.posterAlt,
+             "(max-width: 600px) 300px, (max-width: 991px) 600px, 500px") }}
+      </div>
+    </div>
+
+    <div class="col-lg-7 col-md-12">
+      <span class="event-badge">
+        <i class="fas fa-landmark" aria-hidden="true"></i> {{ seminar.badge | safe }}
+      </span>
+
+      <h2 class="text-yellow fw-bold mb-3 event-spotlight-card__title" style="font-size: {{ titleSize }};">
+        {{ seminar.title }}
+      </h2>
+
+      <ul class="event-meta-list">
+        {% for row in seminar.meta %}
+        <li>
+          <i class="{{ row.icon }}" aria-hidden="true"></i>
+          <span><strong>{{ row.label | safe }}:</strong> {{ row.value | safe }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <div class="event-description text-light-custom">
+        {% for para in seminar.description %}
+        <p{% if loop.last %} class="mb-0"{% endif %}>{{ para | safe }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="event-actions">
+        {% for action in actions %}
+        <a href="{{ action.url }}" class="{{ action.style }}"
+           {% if action.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+          <i class="{{ action.icon }}" aria-hidden="true"></i> {{ action.label | safe }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endmacro %}
+
+{# One photo tile in a gallery grid. #}
+{% macro photoCard(photo, href, linkTitle, sizes, compact=false, external=false) %}
+<div class="seminar-photo-card">
+  <a href="{{ href }}" class="photo-link" title="{{ linkTitle }}"
+     {% if external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+    <div class="seminar-photo-img-wrapper{% if compact %} seminar-photo-img-wrapper--compact{% endif %}">
+      {{ optimizedImage(photo.image, photo.alt, sizes, photo.imageStyle) }}
+    </div>
+  </a>
+  <div class="seminar-photo-caption{% if compact %} py-2 px-3{% endif %}">
+    <strong{% if compact %} class="small"{% endif %}>
+      <i class="{{ photo.icon }} text-yellow me-1" aria-hidden="true"></i> {{ photo.title }}
+    </strong>
+    <span{% if compact %} class="small"{% endif %}>{{ photo.caption | safe }}</span>
+  </div>
+</div>
+{% endmacro %}
+
+{# A section heading used across the events page. #}
+{% macro sectionHeader(badgeIcon, badgeLabel, title, blurb) %}
+<div class="text-center mb-5" data-aos="fade-up">
+  <span class="event-badge"><i class="{{ badgeIcon }}" aria-hidden="true"></i> {{ badgeLabel }}</span>
+  <h2 class="text-yellow fw-bold mt-2 section-header__title">{{ title | safe }}</h2>
+  <p class="text-light-custom mx-auto section-header__blurb">{{ blurb | safe }}</p>
+</div>
+{% endmacro %}

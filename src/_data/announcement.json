@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "badge": "Event Update",
+  "title": "IRS Seminar &bull; Islamabad:",
+  "text": "&ldquo;Ideology of Pakistan and the Role of Islamic Scholars&rdquo;",
+  "cta": {
+    "label": "Seminar Details",
+    "url": "/events.html",
+    "icon": "fas fa-calendar-check"
+  }
+}

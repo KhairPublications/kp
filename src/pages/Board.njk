@@ -1,0 +1,23 @@
+---
+title: Editorial Board
+layout: layouts/page.njk
+navKey: board
+heading: Editorial Board
+subtitle: >-
+  Our esteemed Editorial Team guides Khair Publications in scholarship,
+  dialogue, and publishing excellence.
+description: >-
+  The Khair Publications editorial board brings together scholars of Islamic
+  studies, regional security, Oriental studies, and Urdu literature.
+---
+{% from "components/person-card.njk" import personCard %}
+
+<section class="container mb-5">
+  <div class="row g-4">
+    {% for member in board %}
+    <div class="col-md-6" data-aos="fade-up">
+      {{ personCard(member) }}
+    </div>
+    {% endfor %}
+  </div>
+</section>

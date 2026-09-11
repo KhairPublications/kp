@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Site navigation
+   ========================================================================== */
+
+.navbar-custom {
+  background-color: var(--brand-green-nav);
+}
+
+.navbar-custom .nav-link {
+  color: var(--brand-gold-strong) !important;
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus-visible,
+.navbar-custom .nav-link.active {
+  color: #fff !important;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--brand-gold-strong) !important;
+}

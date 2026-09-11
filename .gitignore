@@ -1,0 +1,24 @@
+# Build output
+dist/
+.cache/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Playwright MCP scratch output
+.playwright-mcp/

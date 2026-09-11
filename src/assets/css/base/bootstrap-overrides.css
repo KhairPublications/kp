@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Bootstrap 5 variable overrides
+   Keeps Bootstrap's own components on-brand without forking its CSS.
+   ========================================================================== */
+
+:root {
+  --bs-blue: #4ba1a7;
+  --bs-red: #f0756c;
+  --bs-orange: var(--brand-gold);
+  --bs-yellow: #efeaea;
+  --bs-green: #f5f8f1;
+  --bs-teal: #efe8ef;
+  --bs-cyan: #f3f3f3;
+  --bs-black: #111;
+  --bs-white: #fff;
+  --bs-gray: #777;
+  --bs-info: #c3c3c3;
+
+  --bs-link-color: #111;
+  --bs-link-color-rgb: 17, 17, 17;
+  --bs-link-hover-color: #f0756c;
+  --bs-link-hover-color-rgb: 240, 117, 108;
+
+  --bs-primary: var(--brand-gold);
+  --bs-body-color: #111;
+  --bs-light-text-emphasis: #c3c3c3;
+
+  --swiper-theme-color: #414c31;
+}
+
+body,
+body [data-bs-theme="light"] {
+  --bs-orange: #ff7c50;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--bs-black);
+  --bs-btn-bg: var(--bs-orange);
+  --bs-btn-border-color: var(--bs-orange);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-black);
+  --bs-btn-hover-border-color: var(--bs-black);
+  --bs-btn-active-bg: var(--bs-black);
+}
+
+.btn-light {
+  --bs-btn-bg: #d3e2e0;
+  --bs-btn-hover-bg: #a4d0ca;
+}
+
+.btn-light.is-checked {
+  --bs-btn-color: var(--bs-light);
+  --bs-btn-bg: var(--bs-primary);
+}
+
+.pagination {
+  --bs-pagination-active-color: var(--bs-light);
+  --bs-pagination-active-bg: var(--bs-black);
+  --bs-pagination-border-width: 0;
+  --bs-pagination-border-radius: 0;
+  --bs-pagination-hover-bg: var(--bs-black);
+}
+
+.table {
+  --bs-table-bg: transparent;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  --bs-nav-tabs-link-active-bg: transparent;
+}
+
+.accordion {
+  --bs-accordion-border-width: 0;
+  --bs-accordion-border-radius: 0;
+  --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-btn-padding-x: 0;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-bg: transparent;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-body-padding-x: 0;
+  --bs-accordion-body-padding-y: 1rem;
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-bg: transparent;
+}
+
+.accordion-button {
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.form-control:focus {
+  border-color: #ccc;
+  box-shadow: 0 0 0 0.25rem rgba(200, 200, 200, 0.25);
+}

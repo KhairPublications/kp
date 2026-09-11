@@ -1,0 +1,17 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{#- Eleventy normalises the home page's permalink of /index.html down to "/",
+    so match that explicitly alongside the other .html pages. -#}
+{%- for item in collections.all %}
+{%- if item.url and (item.url == "/" or item.url.endsWith(".html")) %}
+  <url>
+    <loc>{{ site.url }}{{ item.url }}</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+{%- endif %}
+{%- endfor %}
+</urlset>

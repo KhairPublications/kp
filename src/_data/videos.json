@@ -1,0 +1,18 @@
+[
+  {
+    "embedUrl": "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3116985535299102%2F&show_text=false&width=560&t=0",
+    "watchUrl": "https://www.facebook.com/reel/3116985535299102/",
+    "iframeTitle": "Seminar Highlights - Part 1",
+    "title": "Seminar Video Highlights (Part 1)",
+    "description": "Keynote address delivered by Sahibzada Muhammad Saeed Bhorvi on the scholarly contributions of Sufis and the opening ceremony at IRS Islamabad.",
+    "animation": "fade-right"
+  },
+  {
+    "embedUrl": "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1101511899108775%2F&show_text=false&width=560&t=0",
+    "watchUrl": "https://www.facebook.com/reel/1101511899108775/",
+    "iframeTitle": "Seminar Highlights - Part 2",
+    "title": "Seminar Video Highlights (Part 2)",
+    "description": "Formal book launch ceremony presenting English translations of &ldquo;Sufism&rdquo; and &ldquo;Truthful Tales&rdquo; to distinguished guests and scholars.",
+    "animation": "fade-left"
+  }
+]

@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Design tokens
+   The single source of truth for colour, type, and spacing across the site.
+   ========================================================================== */
+
+:root {
+  /* Brand palette */
+  --brand-green: #1a7e22;
+  --brand-green-deep: #0a3f00;
+  --brand-green-mid: #0d6d00;
+  --brand-green-bright: #137a06;
+  --brand-green-nav: #115802;
+  --brand-gold: #f9c32c;
+  --brand-gold-strong: #ffc107;
+  --brand-gold-soft: #ffd54f;
+  --brand-gold-dark: #e6ac00;
+  --brand-whatsapp: #25d366;
+
+  /* Semantic surfaces */
+  --primary-color: var(--brand-green);
+  --primary-subtle-color: #ad9e14;
+  --secondary-color: var(--brand-gold);
+  --light-bg: #2c773c;
+  --light-bg-alt: #2c773c;
+  --surface-card: var(--brand-green-mid);
+  --surface-overlay: rgba(23, 109, 27, 0.88);
+
+  /* Text */
+  --text-dark: #fdf5e1;
+  --text-light: #fdf5e1;
+  --text-muted: #a09578;
+  --text-on-green: #e6ffe3;
+
+  /* Typography */
+  --font-body: "Poppins", "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-display: "Syne", var(--font-heading);
+
+  --step-hero: clamp(3rem, 16vw, 14.875rem);
+  --step-section: clamp(3rem, 9vw, 9.375rem);
+  --step-content: clamp(2.25rem, 5vw, 4.3125rem);
+  --step-subtitle: clamp(1.25rem, 2.2vw, 1.875rem);
+
+  /* Radii, shadows, motion */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 12px 30px rgba(0, 0, 0, 0.5);
+  --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Layout */
+  --container-max: 1420px;
+}

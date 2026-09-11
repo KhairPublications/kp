@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Base element styles
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* `clip` rather than `hidden`: it suppresses sideways overflow without
+     turning the root into a scroll container. */
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  z-index: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Keyboard users get a visible target before anything else on the page. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background: var(--brand-gold-strong);
+  color: var(--brand-green-deep);
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand-gold-strong);
+  outline-offset: 2px;
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: var(--container-max);
+  }
+}
+
+/* Honour the visitor's reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,20 @@
+{% if announcement.enabled %}
+<aside class="top-announcement-bar" aria-label="Latest event announcement">
+  <div class="container">
+    <div class="announcement-inner">
+      <div class="announcement-message">
+        <span class="announcement-badge"><i class="fas fa-bullhorn" aria-hidden="true"></i> {{ announcement.badge }}</span>
+        <span class="announcement-text">
+          <strong>{{ announcement.title | safe }}</strong> <em>{{ announcement.text | safe }}</em>
+        </span>
+      </div>
+      <div>
+        <a href="{{ announcementCta.url or announcement.cta.url }}" class="announcement-btn">
+          <i class="{{ announcementCta.icon or announcement.cta.icon }}" aria-hidden="true"></i>
+          {{ announcementCta.label or announcement.cta.label }} &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</aside>
+{% endif %}

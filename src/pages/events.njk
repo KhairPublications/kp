@@ -1,0 +1,168 @@
+---
+title: Events & Seminars
+navKey: events
+bodyClass: theme-hero
+description: >-
+  Conferences, academic symposia, and heritage book launches organized and
+  presented by Khair Publications.
+announcementCta:
+  label: Watch Videos
+  url: "#event-videos"
+  icon: fas fa-play
+---
+{% from "components/seminar.njk" import spotlight, photoCard, sectionHeader, optimizedImage %}
+
+<header class="py-5 text-center">
+  <div class="container">
+    <h1 class="section-title mb-2" data-aos="fade-down">Events</h1>
+    <hr class="border-warning border-2 opacity-100 mx-auto mb-4" style="max-width: 250px;">
+    <p class="subtitle text-light-custom mx-auto" style="max-width: 800px;" data-aos="fade-up">
+      Conferences, academic symposia, and heritage book launches organized and presented by {{ site.name }} to bridge
+      classical wisdom with contemporary discourse.
+    </p>
+  </div>
+</header>
+
+<!-- Featured seminar -->
+<section class="py-4 mb-5" id="featured-seminar">
+  <div class="container">
+    {% set eventActions = [
+      { url: "#event-videos",   style: "btn-event-primary",   icon: "fas fa-play",          label: "Watch Event Videos" },
+      { url: "#press-coverage", style: "btn-event-secondary", icon: "far fa-newspaper",     label: "Read Press Coverage" },
+      { url: "#photo-gallery",  style: "btn-event-secondary", icon: "fas fa-images",        label: "Photo Gallery" },
+      { url: "/store.html",     style: "btn-event-secondary", icon: "fas fa-shopping-bag",  label: "View Publications" }
+    ] %}
+    {{ spotlight(seminar, eventActions, "2.1rem") }}
+  </div>
+</section>
+
+<!-- Video highlights -->
+<section class="py-5 position-relative" id="event-videos">
+  <div class="container">
+    {{ sectionHeader("fab fa-facebook", "Media Coverage",
+        "Seminar &amp; Presentation Video Highlights",
+        "Video recordings and speech highlights from the joint IRS and Khair Publications seminar at the Institute of Regional Studies, Islamabad.") }}
+
+    <div class="row g-4 justify-content-center">
+      {% for video in videos %}
+      <div class="col-lg-6 col-md-12" data-aos="{{ video.animation }}">
+        <div class="seminar-video-card">
+          <div class="video-wrapper">
+            <iframe src="{{ video.embedUrl }}"
+                    title="{{ video.iframeTitle }}"
+                    loading="lazy"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+          <h3><i class="fas fa-play text-yellow me-2" aria-hidden="true"></i> {{ video.title }}</h3>
+          <p>{{ video.description | safe }}</p>
+          <div>
+            <a href="{{ video.watchUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-warning">
+              <i class="fab fa-facebook me-1" aria-hidden="true"></i> Watch on Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Photo gallery -->
+<section class="py-5 position-relative" id="photo-gallery">
+  <div class="container">
+    {{ sectionHeader("fas fa-camera", "Visual Highlights",
+        "Seminar &amp; Book Launch Photo Gallery",
+        "Capturing distinguished moments, stage presentations, keynote speeches, and scholarly discussions at IRS Islamabad.") }}
+
+    <div class="row g-4">
+      {% for photo in gallery %}
+      <div class="{{ photo.span }}" data-aos="fade-up" data-aos-delay="{{ photo.delay }}">
+        {{ photoCard(photo,
+             "/assets/images/seminar/" + photo.image + ".jpeg",
+             "View full high-resolution photo",
+             "(max-width: 600px) 300px, (max-width: 991px) 600px, 400px",
+             false, true) }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Press coverage -->
+<section class="py-5 position-relative mb-5" id="press-coverage">
+  <div class="container">
+    {{ sectionHeader("far fa-newspaper", "National Press",
+        "Official Media &amp; Press Coverage",
+        "National print media coverage documenting the joint IRS and Khair Publications seminar and the launch of our English publications.") }}
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10" data-aos="zoom-in">
+        <div class="press-clipping-card">
+          <div class="row g-0 align-items-center">
+
+            <div class="col-md-5">
+              <div class="clipping-image-wrapper p-3">
+                <a href="{{ press.fullImage }}" target="_blank" rel="noopener noreferrer" title="View full high-resolution clipping">
+                  {{ optimizedImage(press.clippingImage, press.clippingAlt, "(max-width: 767px) 90vw, 40vw") }}
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-7">
+              <div class="press-content-wrapper">
+                <div class="press-source-tag">
+                  <i class="far fa-newspaper" aria-hidden="true"></i> {{ press.source }} &bull; {{ press.date }}
+                </div>
+                <h2 class="text-yellow fw-bold mb-3">{{ press.headline | safe }}</h2>
+                <p class="press-byline fst-italic mb-3">{{ press.byline | safe }}</p>
+
+                {% for para in press.body %}
+                <p class="text-light-custom{% if loop.last %} mb-4{% endif %}">{{ para | safe }}</p>
+                {% endfor %}
+
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="{{ press.articleUrl }}" target="_blank" rel="noopener noreferrer" class="btn-event-primary">
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Read Article on The News
+                  </a>
+                  <a href="{{ press.fullImage }}" target="_blank" rel="noopener noreferrer" class="btn-event-secondary">
+                    <i class="fas fa-search-plus" aria-hidden="true"></i> View Newspaper Clipping
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Publications CTA -->
+<section class="py-5 feature-band mb-5" data-aos="clip-bottom">
+  <div class="feature-band__scrim" aria-hidden="true"></div>
+  <div class="container feature-band__body">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10">
+        <h2 class="content-title text-yellow mb-3">Explore Our Publications</h2>
+        <p class="text-muted-custom mb-4" style="font-size: 1.15rem;">
+          Both books launched at the IRS Seminar, <em>&ldquo;Sufism&rdquo;</em> and
+          <em>&ldquo;Truthful Tales: Authentic Islamic Stories&rdquo;</em>, are available worldwide on Amazon and
+          through our direct distribution network.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="/store.html" class="btn btn-outline-warning px-4 py-2 rounded-pill fw-semibold">
+            <i class="fas fa-store me-1" aria-hidden="true"></i> Visit Store
+          </a>
+          <a href="/manuscript.html" class="btn btn-outline-light px-4 py-2 rounded-pill fw-semibold">
+            <i class="fas fa-book me-1" aria-hidden="true"></i> Explore Manuscripts
+          </a>
+          <a href="/contact.html" class="btn btn-warning px-4 py-2 rounded-pill fw-semibold text-dark">
+            <i class="fas fa-envelope me-1" aria-hidden="true"></i> Contact for Inquiries
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

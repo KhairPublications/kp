@@ -1,0 +1,36 @@
+---
+title: Our Team
+navKey: team
+description: >-
+  Meet the patron, founder, and team behind Khair Publications.
+---
+{% from "components/person-card.njk" import personCard, profileCard %}
+
+<section class="container my-5 text-center">
+  <h1 class="section-title mb-2">{{ site.name }}</h1>
+  <hr class="border-warning border-2 opacity-100 mx-5 mb-5">
+</section>
+
+<section class="container mb-5">
+  {% for leader in team.leadership %}
+  <h2 class="text-center text-light-custom mb-5">{{ leader.sectionHeading }}</h2>
+
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-8" data-aos="zoom-in">
+      {{ profileCard(leader) }}
+    </div>
+  </div>
+
+  <hr class="border-warning border-2 opacity-100 mx-5 mb-5">
+  {% endfor %}
+</section>
+
+<section class="container mb-5">
+  <div class="row g-4 justify-content-center">
+    {% for member in team.members %}
+    <div class="col-md-5" data-aos="{{ member.animation }}">
+      {{ personCard(member) }}
+    </div>
+    {% endfor %}
+  </div>
+</section>

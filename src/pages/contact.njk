@@ -1,0 +1,36 @@
+---
+title: Contact Us
+layout: layouts/page.njk
+navKey: contact
+heading: Contact Us
+subtitle: >-
+  We would love to hear from you. Connect with us through the following
+  platforms.
+description: >-
+  Get in touch with Khair Publications by email, phone, WhatsApp, Facebook,
+  or LinkedIn.
+---
+{% set channels = [
+  { icon: "fab fa-facebook-f",  label: "Facebook",      text: "Visit our Facebook Page", url: site.social.facebook, external: true },
+  { icon: "fab fa-linkedin-in", label: "LinkedIn",      text: "Visit our LinkedIn",      url: site.social.linkedin, external: true },
+  { icon: "fab fa-whatsapp",    label: "WhatsApp",      text: "Message us on WhatsApp",  url: site.social.whatsapp, external: true },
+  { icon: "fas fa-envelope",    label: "Email",         text: site.contact.email,        url: "mailto:" + site.contact.email },
+  { icon: "fas fa-phone-alt",   label: "Phone",         text: site.contact.phoneDisplay, url: site.contact.phoneHref }
+] %}
+
+<section class="container mb-5">
+  <div class="row g-4 justify-content-center">
+    {% for channel in channels %}
+    <div class="col-md-5" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
+      <div class="card card-custom text-center p-4 h-100">
+        <i class="{{ channel.icon }} social-icon text-yellow mb-3 mx-auto" aria-hidden="true"></i>
+        <h2 class="text-yellow h5">{{ channel.label }}</h2>
+        <a href="{{ channel.url }}" class="text-light-custom text-decoration-none"
+           {% if channel.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+          {{ channel.text }}
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,9 @@
+[
+  { "key": "home",       "label": "Home",            "url": "/index.html",      "icon": "fas fa-home" },
+  { "key": "events",     "label": "Events",          "url": "/events.html",     "icon": "fas fa-calendar-alt" },
+  { "key": "team",       "label": "Our Team",        "url": "/our-team.html",   "icon": "fas fa-users" },
+  { "key": "board",      "label": "Editorial Board", "url": "/Board.html",      "icon": "fas fa-chalkboard-teacher" },
+  { "key": "manuscript", "label": "Manuscripts",     "url": "/manuscript.html", "icon": "fas fa-book" },
+  { "key": "store",      "label": "Store",           "url": "/store.html",      "icon": "fas fa-store" },
+  { "key": "contact",    "label": "Contact Us",      "url": "/contact.html",    "icon": "fas fa-envelope" }
+]

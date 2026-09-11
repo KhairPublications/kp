@@ -1,0 +1,51 @@
+[
+  { "image": "irs_seminar_book_launch_stage", "span": "col-lg-4 col-md-6", "delay": 100,
+    "alt": "Formal presentation of Sufism and Truthful Tales books on stage",
+    "icon": "fas fa-book-open", "title": "Formal Book Presentation",
+    "caption": "Sahibzada Muhammad Saeed presenting the new English editions of &ldquo;Sufism&rdquo; and &ldquo;Truthful Tales&rdquo; to distinguished guests on stage." },
+
+  { "image": "irs_seminar_speech_sms", "span": "col-lg-4 col-md-6", "delay": 200,
+    "alt": "Keynote address by Sahibzada Muhammad Saeed at IRS Islamabad",
+    "icon": "fas fa-microphone", "title": "Keynote Address",
+    "caption": "Sahibzada Muhammad Saeed delivering the keynote speech on the intellectual roots of Sufism and the ideology of Pakistan." },
+
+  { "image": "irs_seminar_book_launch_closeup", "span": "col-lg-4 col-md-6", "delay": 300,
+    "alt": "Close-up presentation of Khair Publications books",
+    "icon": "fas fa-award", "title": "Dual Book Unveiling",
+    "caption": "A close-up view of the formal unveiling of Khair Publications' newly published English works." },
+
+  { "image": "irs_seminar_hall_audience", "span": "col-lg-4 col-md-6", "delay": 100,
+    "alt": "Audience and dignitaries in the IRS Islamabad hall",
+    "icon": "fas fa-users", "title": "Distinguished Audience",
+    "caption": "Scholars, researchers, diplomats, and intellectuals gathered at the Institute of Regional Studies hall." },
+
+  { "image": "irs_seminar_panel_sms_rizwan", "span": "col-lg-4 col-md-6", "delay": 200,
+    "alt": "Panel discussion and dialogue at the seminar",
+    "icon": "fas fa-comments", "title": "Scholarly Dialogue",
+    "caption": "Interactive discussion on contemporary relevance of Islamic teachings and regional harmony." },
+
+  { "image": "irs_seminar_presentation_slide", "span": "col-lg-4 col-md-6", "delay": 300,
+    "alt": "Presentation slide during the seminar session",
+    "icon": "fas fa-desktop", "title": "Research Presentation",
+    "caption": "Academic presentation showcasing historical timeline and the contributions of subcontinental Sufi scholars." },
+
+  { "image": "irs_seminar_speech_sultan_nasir", "span": "col-lg-3 col-md-6", "delay": 100,
+    "alt": "Address by Sultan Nasir at the seminar",
+    "icon": "fas fa-user-tie", "title": "Address: Sultan Nasir",
+    "caption": "Sharing insights on preserving classical Islamic literature and research." },
+
+  { "image": "irs_seminar_speech_dr_rehman", "span": "col-lg-3 col-md-6", "delay": 200,
+    "alt": "Address by Dr. Rehman at the seminar",
+    "icon": "fas fa-user-graduate", "title": "Address: Dr. Rehman",
+    "caption": "Reflecting on the enduring legacy of Sufi masters and Khair Publications." },
+
+  { "image": "irs_seminar_speech_guest", "span": "col-lg-3 col-md-6", "delay": 300,
+    "alt": "Address by distinguished guest speaker at the seminar",
+    "icon": "fas fa-microphone-lines", "title": "Guest Address",
+    "caption": "Distinguished guest address highlighting the role of Ulema and spiritual scholars." },
+
+  { "image": "irs_seminar_interview_sultan_nasir", "span": "col-lg-3 col-md-6", "delay": 400,
+    "alt": "Media interview with Sultan Nasir at the seminar",
+    "icon": "fas fa-video", "title": "Media Interview",
+    "caption": "Post-session media interview on the significance of the seminar and book launch." }
+]

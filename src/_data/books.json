@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "sufism",
+    "title": "Sufism",
+    "image": "/assets/images/books/book1.jpg",
+    "imageAlt": "Sufism - Pir Khair Muhammad Bhorvi",
+    "badge": { "label": "Presented at IRS Seminar 2026", "icon": "fas fa-award" },
+    "author": "Pir Khair Muhammad Bhorvi",
+    "translator": "Sahibzada Muhammad Saeed Bhorvi",
+    "description": "A timeless guide to self-discovery, spiritual growth, and inner peace, formally presented at the IRS Islamabad seminar.",
+    "year": "2025",
+    "amazonUrl": "https://www.amazon.com/Sufism-Pir-Khair-Muhammad-Bhorvi-ebook/dp/B0F2711Z3Y",
+    "whatsappMessage": "I want to buy Sufism Book"
+  },
+  {
+    "slug": "truthful-tales",
+    "title": "Truthful Tales",
+    "image": "/assets/images/books/book2.jpg",
+    "imageAlt": "Truthful Tales - Pir Khair Muhammad Bhorvi",
+    "badge": { "label": "Presented at IRS Seminar 2026", "icon": "fas fa-award" },
+    "author": "Pir Khair Muhammad Bhorvi",
+    "translator": "Sahibzada Muhammad Saeed Bhorvi",
+    "description": "Authentic Islamic stories inspiring faith, moral excellence, and spiritual reflection across generations.",
+    "year": "2025",
+    "longTitle": "Truthful Tales: Authentic Islamic Stories",
+    "longDescription": "A spiritually enriching collection of authentic Islamic stories inspiring faith, moral excellence, and self-discovery across generations.",
+    "amazonUrl": "https://www.amazon.com/Truthful-Tales-Authentic-Islamic-Stories-ebook/dp/B0FGHZHGQY/",
+    "whatsappMessage": "I want to buy Truthful Tales Book"
+  },
+  {
+    "slug": "hayat-e-murshid",
+    "title": "Hayat-e-Murshid",
+    "image": "/assets/images/books/newbook.png",
+    "imageAlt": "Hayat-e-Murshid",
+    "badge": { "label": "Spiritual Biography", "icon": "fas fa-book" },
+    "price": "Rs. 800",
+    "edition": "Khair Publications",
+    "description": "A spiritual journey into the life, teachings, and legacy of Hazrat Pir Muhammad Siddique Bhorvi (RA).",
+    "year": "Spiritual Biography",
+    "whatsappMessage": "I want to buy Hayat-e-Murshid Book"
+  }
+]
