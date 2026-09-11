@@ -1,0 +1,62 @@
+/* ==========================================================================
+   End-of-page navigation
+   A repeat of the main menu, shown above the footer.
+   ========================================================================== */
+
+.page-nav {
+  padding: 2.5rem 0 0.5rem;
+}
+
+.page-nav__label {
+  text-align: center;
+  color: var(--brand-gold-strong);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.page-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.page-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border: 2px solid var(--brand-gold-strong);
+  border-radius: 999px;
+  color: var(--brand-gold-strong);
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.page-nav__link:hover,
+.page-nav__link:focus-visible {
+  background-color: var(--brand-gold-strong);
+  color: var(--brand-green-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 575.98px) {
+  .page-nav__list {
+    gap: 0.5rem;
+  }
+
+  .page-nav__link {
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
+  }
+}

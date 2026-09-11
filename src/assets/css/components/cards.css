@@ -74,6 +74,27 @@
   transform: translateY(-10px) scale(1.03);
 }
 
+/* Contact cards -------------------------------------------------------- */
+
+/* The whole tile is a link, so give it a pointer and lift the hover and
+   keyboard-focus states from the anchor up onto the card. */
+.contact-card {
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  border-color: var(--brand-gold-strong);
+}
+
+.contact-card:focus-within {
+  outline: 3px solid var(--brand-gold-strong);
+  outline-offset: 2px;
+}
+
+.contact-card .stretched-link:focus-visible {
+  outline: none;
+}
+
 /* Footer links and social icons ---------------------------------------- */
 
 .footer-link {

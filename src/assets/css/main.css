@@ -16,6 +16,7 @@
 
 /* 3. Components */
 @import "./components/navbar.css";
+@import "./components/page-nav.css";
 @import "./components/announcement.css";
 @import "./components/buttons.css";
 @import "./components/cards.css";

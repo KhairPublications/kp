@@ -21,11 +21,13 @@ description: >-
 <section class="container mb-5">
   <div class="row g-4 justify-content-center">
     {% for channel in channels %}
-    <div class="col-md-5" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 50 }}">
-      <div class="card card-custom text-center p-4 h-100">
+    <div class="col-md-5" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 110 }}">
+      {# position-relative plus stretched-link makes the whole card the
+         click target while keeping a single link in the accessibility tree. #}
+      <div class="card card-custom contact-card text-center p-4 h-100 position-relative">
         <i class="{{ channel.icon }} social-icon text-yellow mb-3 mx-auto" aria-hidden="true"></i>
         <h2 class="text-yellow h5">{{ channel.label }}</h2>
-        <a href="{{ channel.url }}" class="text-light-custom text-decoration-none"
+        <a href="{{ channel.url }}" class="text-light-custom text-decoration-none stretched-link"
            {% if channel.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
           {{ channel.text }}
         </a>

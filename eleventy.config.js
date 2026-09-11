@@ -67,19 +67,40 @@ export default function (eleventyConfig) {
   // Filters
   // ---------------------------------------------------------------------
 
-  /** Cache-busting suffix derived from the asset's own mtime. */
+  /**
+   * Cache-busting query derived from the bytes the browser will actually
+   * receive.
+   *
+   * For CSS this means hashing the bundled output, not the entry file:
+   * main.css is only a list of @import lines, so hashing it would leave the
+   * version string unchanged whenever a partial is edited and returning
+   * visitors would keep their stale stylesheet.
+   */
+  const bustCache = new Map();
+
   eleventyConfig.addFilter("bust", (url) => {
-    const local = path.join("src", url.replace(/^\/+/, ""));
+    if (bustCache.has(url)) return bustCache.get(url);
+
+    const local = path.join("src", url.split("?")[0].replace(/^\/+/, ""));
+
+    let bytes;
     try {
-      const stat = readFileSync(local);
-      let hash = 0;
-      for (let i = 0; i < stat.length; i += 1) {
-        hash = (hash * 31 + stat[i]) >>> 0;
-      }
-      return `${url}?v=${hash.toString(36)}`;
+      bytes = local.endsWith(".css")
+        ? bundle({ filename: local, minify: IS_PRODUCTION, targets: CSS_TARGETS }).code
+        : readFileSync(local);
     } catch {
       return url;
     }
+
+    // FNV-1a, enough to detect change; this is not a security boundary.
+    let hash = 0x811c9dc5;
+    for (let i = 0; i < bytes.length; i += 1) {
+      hash = ((hash ^ bytes[i]) * 0x01000193) >>> 0;
+    }
+
+    const busted = `${url}?v=${hash.toString(36)}`;
+    bustCache.set(url, busted);
+    return busted;
   });
 
   /** Absolute URL against the configured site origin, for meta tags. */

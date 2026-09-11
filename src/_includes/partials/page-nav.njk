@@ -1,0 +1,24 @@
+{#
+  End-of-page navigation. Repeats the main menu as buttons so a reader who
+  has scrolled to the bottom can move on without returning to the header.
+  The current page is omitted. Set `showPageNav: false` in a page's front
+  matter to suppress it.
+#}
+{% if showPageNav !== false %}
+<nav class="page-nav" aria-label="Continue browsing">
+  <div class="container">
+    <p class="page-nav__label">Continue browsing</p>
+    <ul class="page-nav__list">
+      {% for item in navigation %}
+      {% if item.key != navKey %}
+      <li>
+        <a href="{{ item.url }}" class="page-nav__link">
+          <i class="{{ item.icon }}" aria-hidden="true"></i> {{ item.label }}
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endif %}

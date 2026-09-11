@@ -43,6 +43,23 @@
   padding: 10px 5px 50px !important;
 }
 
+/* Equal-height slides. Swiper gives each slide its own content height, so
+   the `h-100` on the card inside resolves against a box that is already
+   only as tall as that card. Stretching the track and letting the slide
+   size to the tallest sibling makes every tile match. */
+.worksSwiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.worksSwiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+.worksSwiper .swiper-slide > .card-custom {
+  width: 100%;
+}
+
 .works-swiper-pagination .swiper-pagination-bullet {
   background: var(--brand-gold-strong) !important;
   opacity: 0.5;

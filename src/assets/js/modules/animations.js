@@ -11,10 +11,10 @@ export function initAnimations() {
   window.AOS.init({
     // Keep reveals brief. Anything longer reads as the page being slow
     // rather than as a considered transition.
-    duration: prefersReducedMotion ? 0 : 280,
-    // Fire as soon as any part of the element enters the viewport, rather
-    // than waiting until it is 120px in, which is AOS's default.
-    offset: 0,
+    duration: prefersReducedMotion ? 0 : 650,
+    // How far into the viewport an element travels before its reveal
+    // starts. AOS defaults to 120.
+    offset: 100,
     once: true,
     easing: "ease-out-cubic",
     disable: prefersReducedMotion,
