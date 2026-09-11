@@ -9,9 +9,14 @@ export function initAnimations() {
   ).matches;
 
   window.AOS.init({
-    duration: prefersReducedMotion ? 0 : 1000,
+    // Keep reveals brief. Anything longer reads as the page being slow
+    // rather than as a considered transition.
+    duration: prefersReducedMotion ? 0 : 450,
+    // Start the reveal as the element enters the viewport instead of
+    // waiting until it is 120px in, which is AOS's default.
+    offset: 40,
     once: true,
-    easing: "ease-in-out",
+    easing: "ease-out-cubic",
     disable: prefersReducedMotion,
   });
 }

@@ -7,7 +7,13 @@
 /* Photographic background with a green wash, used by the home and events
    pages. The overlay sits behind content via a fixed pseudo-element. */
 .theme-hero {
-  background-image: url("/assets/images/brand/bhorvi.JPG");
+  /* image-set lets the browser pick AVIF or WebP and fall back to JPEG.
+     Lightning CSS emits the -webkit- prefixed form alongside this. */
+  background-image: image-set(
+    url("/assets/images/brand/optimized/bhorvi.avif") type("image/avif"),
+    url("/assets/images/brand/optimized/bhorvi.webp") type("image/webp"),
+    url("/assets/images/brand/optimized/bhorvi.jpg") type("image/jpeg")
+  );
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

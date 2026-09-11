@@ -1,9 +1,11 @@
 {# A circular-portrait person card, used by the team and editorial board pages. #}
 {% macro personCard(person, options={}) %}
 <div class="card card-custom h-100 p-4 text-center">
-  <img src="{{ person.image }}" alt="{{ person.name }}"
-       class="person-card__avatar rounded-circle mx-auto bg-white p-1 mb-3"
-       loading="lazy" decoding="async" width="160" height="160">
+  {% image person.image, person.name, {
+    sizes: "160px",
+    className: "person-card__avatar rounded-circle mx-auto bg-white p-1 mb-3",
+    widths: [300, 600]
+  } %}
   <h3 class="card-title text-yellow h4">{{ person.name }}</h3>
   {% if person.role %}
   <p class="card-text"><strong>{{ person.role }}</strong>{% if person.affiliation %}<br>{{ person.affiliation }}{% endif %}</p>
@@ -16,9 +18,10 @@
 {# A wide portrait card for leadership profiles. #}
 {% macro profileCard(person) %}
 <div class="card card-custom text-center p-4">
-  <img src="{{ person.image }}" alt="{{ person.name }}"
-       class="profile-card__portrait card-img-top rounded bg-white p-1 mb-3"
-       loading="lazy" decoding="async">
+  {% image person.image, person.name, {
+    sizes: "(max-width: 767px) 90vw, 640px",
+    className: "profile-card__portrait card-img-top rounded bg-white p-1 mb-3"
+  } %}
   <div class="card-body">
     <h3 class="card-title fw-bold text-yellow h4">{{ person.name }}</h3>
     {% if person.title %}<p class="card-text">{{ person.title }}</p>{% endif %}

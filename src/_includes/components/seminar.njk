@@ -1,21 +1,15 @@
-{# Responsive <picture> for a pre-optimized seminar image. #}
+{# Responsive <picture> for a seminar image, addressed by bare filename.
+   Delegates to the site-wide `image` shortcode so there is one place that
+   knows how optimised derivatives are named. #}
 {% macro optimizedImage(name, alt, sizes, extraStyle="", widths=[300,600,1200]) %}
-{%- set base = "/assets/images/seminar/optimized/" + name -%}
-<picture>
-  <source srcset="{{ base }}.avif" type="image/avif">
-  <source srcset="{{ base }}.webp" type="image/webp">
-  <img src="{{ base }}-600.jpg"
-       srcset="{% for w in widths %}{{ base }}-{{ w }}.jpg {{ w }}w{% if not loop.last %}, {% endif %}{% endfor %}"
-       sizes="{{ sizes }}"
-       alt="{{ alt }}"
-       {% if extraStyle %}style="{{ extraStyle }}"{% endif %}
-       loading="lazy" decoding="async">
-</picture>
+{% image "/assets/images/seminar/" + name, alt, {
+  sizes: sizes, style: extraStyle, widths: widths
+} %}
 {% endmacro %}
 
 {# The main event spotlight card, shared by the home page and the events page. #}
 {% macro spotlight(seminar, actions, titleSize="2rem") %}
-<div class="event-spotlight-card" data-aos="zoom-in" data-aos-duration="1000">
+<div class="event-spotlight-card" data-aos="zoom-in">
   <div class="row g-4 align-items-center">
 
     <div class="col-lg-5 col-md-12">

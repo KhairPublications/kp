@@ -11,6 +11,8 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
+    "optimize-images": "node tools/optimize-images.js",
+    "generate-assets": "python tools/generate-assets.py",
     "clean": "node tools/clean.js",
     "preview": "node tools/serve.js dist 8099",
     "validate": "node tools/validate-build.js",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "browserslist": "^4.28.9",
-    "lightningcss": "^1.28.2"
+    "lightningcss": "^1.28.2",
+    "sharp": "^0.35.4"
   }
 }

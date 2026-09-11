@@ -19,6 +19,14 @@ npm run clean    # delete dist/
 
 Node 20 or newer is required. The version is pinned in `.nvmrc`.
 
+Two asset scripts are run by hand, not on every build, because their output
+is committed:
+
+```bash
+npm run optimize-images    # regenerate AVIF/WebP/JPEG derivatives
+npm run generate-assets    # regenerate the favicon set (needs Python + Pillow)
+```
+
 ## Repository layout
 
 ```
@@ -115,11 +123,33 @@ If you ever rename a page, add a redirect rather than breaking the old URL.
 
 ## Images
 
-Seminar photographs are pre-generated at several widths in
-`src/assets/images/seminar/optimized/` as AVIF, WebP, and JPEG. The
-`optimizedImage` macro in `components/seminar.njk` emits the matching
-`<picture>` element. When adding a seminar photo, generate the same variants
-and the macro will pick them up.
+`npm run optimize-images` converts every JPEG and PNG under
+`src/assets/images` into AVIF, WebP, and responsive JPEG fallbacks, writing
+them to an `optimized/` folder beside the source. Derivatives are committed,
+so the deploy does not need to run the optimiser. Re-run it after adding or
+replacing a picture; it skips anything already up to date, and `-- --force`
+rebuilds everything.
+
+Templates never reference the derivative paths directly. The `image`
+shortcode takes the original path and emits the `<picture>` element:
+
+```njk
+{% image "/assets/images/books/book1.jpg", "Sufism cover", {
+  sizes: "(max-width: 767px) 60vw, 200px",
+  className: "img-fluid rounded"
+} %}
+```
+
+If a derivative is missing it falls back to a plain `<img>` on the original,
+so a new image still renders before the optimiser has run.
+
+`src/assets/images/_originals/` holds source artwork that should never be
+served, such as the untrimmed book render. It is excluded from both the
+optimiser and the build output.
+
+Favicons are generated from `src/assets/images/brand/khair-logo.png` by
+`tools/generate-assets.py`, which also trims the transparent margin from
+the book render. Run it after changing the logo.
 
 ## Validation
 

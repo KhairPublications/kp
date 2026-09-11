@@ -2,8 +2,11 @@
 {% macro bookCard(book, site, variant="store") %}
 <div class="card card-custom book-card h-100 p-4 text-center d-flex flex-column">
   <div class="book-card__media">
-    <img src="{{ book.image }}" alt="{{ book.imageAlt }}"
-         class="img-fluid rounded shadow-lg" loading="lazy" decoding="async">
+    {% image book.image, book.imageAlt, {
+      sizes: "(max-width: 767px) 60vw, (max-width: 991px) 30vw, 200px",
+      className: "img-fluid rounded shadow-lg",
+      widths: [300, 600]
+    } %}
   </div>
 
   <span class="badge bg-warning text-dark mb-2 py-1 px-2 fw-bold align-self-center">

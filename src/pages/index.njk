@@ -13,7 +13,7 @@ description: >-
 <header class="position-relative">
   <div class="bg-dark-custom p-2 p-lg-5 m-3 m-lg-4 rounded-4">
 
-    <h1 class="content-title fw-bold text-center mx-auto mb-0" data-aos="fade-right" data-aos-duration="1000">
+    <h1 class="content-title fw-bold text-center mx-auto mb-0" data-aos="fade-right">
       <span class="text-yellow">Khair</span> <span class="text-yellow">Publications</span>
     </h1>
 
@@ -21,7 +21,7 @@ description: >-
 
     <div class="w-100 text-center overflow-hidden" aria-hidden="true">
       <div class="syne-font hero-title text-yellow" data-aos="fade-up">Khair</div>
-      {% for delay in [200, 400, 600] %}
+      {% for delay in [60, 120, 180] %}
       <div class="syne-font hero-title hero-bg-text" data-aos="fade-up" data-aos-delay="{{ delay }}">Khair</div>
       {% endfor %}
     </div>
@@ -31,7 +31,7 @@ description: >-
         <div class="row g-lg-5">
           <div class="col-md-6"></div>
           <div class="col-md-6">
-            <div class="panel-green" data-aos="text-reveal-up" data-aos-delay="1000">
+            <div class="panel-green" data-aos="text-reveal-up">
               <div class="swiper servicesSwiper">
                 <div class="swiper-wrapper">
                   {% set visionPoints = [
@@ -60,11 +60,15 @@ description: >-
 <section class="py-5 my-5 position-relative">
   <div class="container">
     <div class="row g-lg-5">
-      <div class="banner-image col-md-6" data-aos="clip-bottom" data-aos-duration="1000">
-        <img src="/assets/images/brand/logo1.pnj.png" class="img-fluid" alt="Khair Publications logo">
+      <div class="banner-image col-md-6" data-aos="clip-bottom">
+        {% image "/assets/images/brand/khair-logo.png", "Khair Publications crest", {
+          sizes: "(max-width: 767px) 80vw, 40vw",
+          className: "img-fluid",
+          widths: [300, 600]
+        } %}
       </div>
 
-      <div class="col-md-6 panel-green" data-aos="clip-top" data-aos-delay="1000">
+      <div class="col-md-6 panel-green" data-aos="clip-top">
         <h2 class="content-title text-yellow mb-4 fw-bold">{{ site.name }}</h2>
 
         <blockquote class="fst-italic fs-4 mb-4">
@@ -94,7 +98,7 @@ description: >-
     <div class="container">
       <div class="row">
         <div class="col-md-6 py-5">
-          <div class="panel-green mt-5 rounded-4 overflow-hidden" data-aos="clip-top" data-aos-delay="1000">
+          <div class="panel-green mt-5 rounded-4 overflow-hidden" data-aos="clip-top">
             <h2 class="content-title text-yellow mb-4 fw-bold">Publications</h2>
 
             {% for book in books %}
@@ -117,13 +121,13 @@ description: >-
   <div class="container overflow-hidden">
     <div class="position-absolute top-0 start-50 translate-middle-x" aria-hidden="true">
       <div class="syne-font section-title text-yellow" data-aos="fade-up">Interests</div>
-      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="200">Interests</div>
-      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="400">Interests</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="60">Interests</div>
+      <div class="syne-font section-title section-title-bg" data-aos="fade-up" data-aos-delay="120">Interests</div>
     </div>
 
     <div class="row">
       <div class="col-md-6 py-5">
-        <div class="panel-green rounded-4" data-aos="clip-bottom" data-aos-duration="1000">
+        <div class="panel-green rounded-4" data-aos="clip-bottom">
           <h2 class="text-yellow content-title mb-4 fw-bold">Interests</h2>
 
           {% set interests = [
