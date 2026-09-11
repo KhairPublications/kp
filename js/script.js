@@ -113,33 +113,33 @@
       },
     });
 
-   const worksSwiper = new Swiper('.worksSwiper', {
-  slidesPerView: 4,
-  spaceBetween: 40, // Increased default gap
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    300: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-    1200: {
+    const worksSwiper = new Swiper('.worksSwiper', {
       slidesPerView: 3,
-      spaceBetween: 40,
-    },
-  },
-});
+      spaceBetween: 30,
+      loop: false,
+      pagination: {
+        el: '.works-swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.works-swiper-next',
+        prevEl: '.works-swiper-prev',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
 
 
     // Initialize Articles Swiper

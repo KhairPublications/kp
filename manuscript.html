@@ -142,13 +142,88 @@
 
 
 
+    /* Top Announcement Banner */
+    .top-announcement-bar {
+      background: linear-gradient(90deg, #072e00 0%, #0d5802 50%, #072e00 100%);
+      border-bottom: 2px solid #ffc107;
+      padding: 10px 0;
+      position: relative;
+      z-index: 1030;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    .announcement-badge {
+      background-color: #ffc107;
+      color: #0a3f00;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.5px;
+    }
+    .announcement-text {
+      color: #e6ffe3;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .announcement-btn {
+      background-color: transparent;
+      color: #ffc107 !important;
+      border: 1px solid #ffc107;
+      border-radius: 20px;
+      padding: 3px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .announcement-btn:hover {
+      background-color: #ffc107;
+      color: #0a3f00 !important;
+    }
+    @media (max-width: 768px) {
+      .top-announcement-bar {
+        padding: 8px 0;
+      }
+      .announcement-text {
+        font-size: 0.85rem;
+      }
+      .announcement-btn {
+        font-size: 0.78rem;
+        padding: 3px 10px;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-announcement-bar" aria-label="Latest Event Announcement">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <span class="announcement-badge"><i class="fas fa-bullhorn"></i> Event Update</span>
+          <span class="announcement-text">
+            <strong>IRS Seminar &bull; Islamabad:</strong> <em>&ldquo;Ideology of Pakistan and the Role of Islamic Scholars&rdquo;</em>
+          </span>
+        </div>
+        <div>
+          <a href="events.html" class="announcement-btn"><i class="fas fa-calendar-check"></i> Seminar Details &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow">
   <div class="container">
-    <a class="navbar-brand" href="#">Khair Publications</a>
+    <a class="navbar-brand" href="index.html">Khair Publications</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler text-yellow" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -160,10 +235,11 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html"><i class="fas fa-calendar-alt me-1"></i> Events</a></li>
         <li class="nav-item"><a class="nav-link" href="our-team.html"><i class="fas fa-users me-1"></i> Our Team</a></li>
-        <li class="nav-item"><a class="nav-link active" href="Board.html"><i class="fas fa-chalkboard-teacher me-1"></i> Editorial Board</a></li>
-        <li class="nav-item"><a class="nav-link" href="manuscript.html"><i class="fas fa-book me-1"></i> Manuscripts</a></li>
-        <li class="nav-item"><a class="nav-link active" href="store.html"><i class="fas fa-store me-1"></i> Store</a></li>
+        <li class="nav-item"><a class="nav-link" href="Board.html"><i class="fas fa-chalkboard-teacher me-1"></i> Editorial Board</a></li>
+        <li class="nav-item"><a class="nav-link active" href="manuscript.html"><i class="fas fa-book me-1"></i> Manuscripts</a></li>
+        <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store me-1"></i> Store</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact Us</a></li>
       </ul>
     </div>

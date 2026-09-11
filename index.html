@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Inter:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -216,10 +216,27 @@
   </svg>
 
 
+  <!-- Top Announcement Bar -->
+  <aside class="top-announcement-bar" aria-label="Latest Event Announcement">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="d-flex align-items-center flex-wrap gap-2">
+          <span class="announcement-badge"><i class="fas fa-bullhorn"></i> Event Update</span>
+          <span class="announcement-text">
+            <strong>IRS Seminar &bull; Islamabad:</strong> <em>&ldquo;Ideology of Pakistan and the Role of Islamic Scholars&rdquo;</em>
+          </span>
+        </div>
+        <div>
+          <a href="events.html" class="announcement-btn"><i class="fas fa-calendar-check"></i> Seminar Details &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-custom sticky-top shadow">
   <div class="container">
-    <a class="navbar-brand" href="#">Khair Publications</a>
+    <a class="navbar-brand" href="index.html">Khair Publications</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler text-yellow" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -230,11 +247,12 @@
     <!-- Menu -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html"><i class="fas fa-calendar-alt me-1"></i> Events</a></li>
         <li class="nav-item"><a class="nav-link" href="our-team.html"><i class="fas fa-users me-1"></i> Our Team</a></li>
-        <li class="nav-item"><a class="nav-link active" href="Board.html"><i class="fas fa-chalkboard-teacher me-1"></i> Editorial Board</a></li>
+        <li class="nav-item"><a class="nav-link" href="Board.html"><i class="fas fa-chalkboard-teacher me-1"></i> Editorial Board</a></li>
         <li class="nav-item"><a class="nav-link" href="manuscript.html"><i class="fas fa-book me-1"></i> Manuscripts</a></li>
-        <li class="nav-item"><a class="nav-link active" href="store.html"><i class="fas fa-store me-1"></i> Store</a></li>
+        <li class="nav-item"><a class="nav-link" href="store.html"><i class="fas fa-store me-1"></i> Store</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact Us</a></li>
       </ul>
     </div>
@@ -359,11 +377,19 @@
               </p>
             </div>
 
-            <div>
+            <div class="mb-4">
               <div class="date-text mb-2" style="color: white;">2025</div>
-              <h3 class="text-yellow subtitle mb-2">Truthful Tales: Authentics Islamic Stories</h3>
+              <h3 class="text-yellow subtitle mb-2">Truthful Tales: Authentic Islamic Stories</h3>
               <p>
                 A spiritually enriching collection of authentic Islamic stories inspiring faith, moral excellence, and self-discovery across generations.
+              </p>
+            </div>
+
+            <div>
+              <div class="date-text mb-2" style="color: white;">Spiritual Biography</div>
+              <h3 class="text-yellow subtitle mb-2">Hayat-e-Murshid</h3>
+              <p>
+                A spiritual journey into the life, teachings, and legacy of Hazrat Pir Muhammad Siddique Bhorvi (RA).
               </p>
             </div>
 
@@ -429,52 +455,291 @@
     <h2 class="text-yellow content-title text-center mb-5" data-aos="fade-up">Our Work</h2>
 
     <!-- Swiper Works -->
-    <div class="swiper worksSwiper mb-5" data-aos="fade-up" data-aos-delay="200">
+    <div class="swiper worksSwiper mb-4" data-aos="fade-up" data-aos-delay="200">
       <div class="swiper-wrapper">
 
+        <!-- Slide 1: Sufism -->
         <div class="swiper-slide">
-          <div style="padding:0 20px; box-sizing:border-box;">
-            <div class="card card-custom">
-              <img src="images/book1.jpg" class="img-fluid" alt="Solaris App Interface" />
-              <div class="card-body text-center">
-                <div class="date-text mb-2">Book</div>
-                <h3 class="subtitle">Sufism</h3>
-                <a href="https://www.amazon.com/Sufism-Pir-Khair-Muhammad-Bhorvi-ebook/dp/B0F2711Z3Y" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
-  <i class="fab fa-amazon"></i> View on Amazon
-</a>
-
-              </div>
+          <div class="card card-custom h-100 p-4 text-center d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-center mb-3" style="height: 310px;">
+              <img src="images/book1.jpg" alt="Sufism - Pir Khair Muhammad Bhorvi" class="img-fluid rounded shadow-lg" style="max-height: 300px; width: auto; object-fit: contain; margin: 0 auto;">
+            </div>
+            <span class="badge bg-warning text-dark mb-2 py-1 px-2 fw-bold align-self-center"><i class="fas fa-award"></i> Presented at IRS Seminar 2026</span>
+            <h4 class="text-yellow mb-2 fw-bold">Sufism</h4>
+            <p class="text-light-custom mb-1 small">Author: <strong class="text-yellow">Pir Khair Muhammad Bhorvi</strong></p>
+            <p class="text-light-custom mb-2 small">Translation: <strong class="text-yellow">Sahibzada Muhammad Saeed Bhorvi</strong></p>
+            <p class="text-light-custom flex-grow-1 small mb-3">
+              A timeless guide to self-discovery, spiritual growth, and inner peace, formally presented at the IRS Islamabad seminar.
+            </p>
+            <div class="d-flex flex-column gap-2 mt-auto pt-2">
+              <a href="https://www.amazon.com/Sufism-Pir-Khair-Muhammad-Bhorvi-ebook/dp/B0F2711Z3Y" target="_blank" class="btn-book-primary w-100">
+                <i class="fab fa-amazon me-2"></i> Buy on Amazon
+              </a>
+              <a href="https://wa.me/923219841780?text=I want to buy Sufism Book" target="_blank" class="btn-book-whatsapp w-100">
+                <i class="fab fa-whatsapp me-2"></i> Order via WhatsApp
+              </a>
             </div>
           </div>
         </div>
 
+        <!-- Slide 2: Truthful Tales -->
         <div class="swiper-slide">
-          <div style="padding:0 20px; box-sizing:border-box;">
-            <div class="card card-custom">
-              <img src="images/book2.jpg" class="img-fluid" alt="Urban Cafe Branding" />
-              <div class="card-body text-center">
-                <div class="date-text mb-2">Book</div>
-                <h3 class="subtitle">Truthful Tales</h3>
-                <a href="https://www.amazon.com/Truthful-Tales-Authentic-Islamic-Stories-ebook/dp/B0FGHZHGQY/ref=sr_1_2?dib=eyJ2IjoiMSJ9.emNtD529YE_Y_vk2o1L1sYm5WoNKHOVfpaf0QKIddZg.bp2i2yDp_rfRBMhzeHxqw3NP-CZTlNfSAqbokbUEiFo&dib_tag=se&qid=1752230045&refinements=p_27%3APir+Khair++Muhammad+Bhorvi&s=digital-text&sr=1-2&text=Pir+Khair++Muhammad+Bhorvi" target="_blank" class="btn btn-sm btn-outline-dark mt-2">
-  <i class="fab fa-amazon"></i> View on Amazon
-</a>
+          <div class="card card-custom h-100 p-4 text-center d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-center mb-3" style="height: 310px;">
+              <img src="images/book2.jpg" alt="Truthful Tales - Pir Khair Muhammad Bhorvi" class="img-fluid rounded shadow-lg" style="max-height: 300px; width: auto; object-fit: contain; margin: 0 auto;">
+            </div>
+            <span class="badge bg-warning text-dark mb-2 py-1 px-2 fw-bold align-self-center"><i class="fas fa-award"></i> Presented at IRS Seminar 2026</span>
+            <h4 class="text-yellow mb-2 fw-bold">Truthful Tales</h4>
+            <p class="text-light-custom mb-1 small">Author: <strong class="text-yellow">Pir Khair Muhammad Bhorvi</strong></p>
+            <p class="text-light-custom mb-2 small">Translation: <strong class="text-yellow">Sahibzada Muhammad Saeed Bhorvi</strong></p>
+            <p class="text-light-custom flex-grow-1 small mb-3">
+              Authentic Islamic stories inspiring faith, moral excellence, and spiritual reflection across generations.
+            </p>
+            <div class="d-flex flex-column gap-2 mt-auto pt-2">
+              <a href="https://www.amazon.com/Truthful-Tales-Authentic-Islamic-Stories-ebook/dp/B0FGHZHGQY/ref=sr_1_2?dib=eyJ2IjoiMSJ9.emNtD529YE_Y_vk2o1L1sYm5WoNKHOVfpaf0QKIddZg.bp2i2yDp_rfRBMhzeHxqw3NP-CZTlNfSAqbokbUEiFo&dib_tag=se&qid=1752230045&refinements=p_27%3APir+Khair++Muhammad+Bhorvi&s=digital-text&sr=1-2&text=Pir+Khair++Muhammad+Bhorvi" target="_blank" class="btn-book-primary w-100">
+                <i class="fab fa-amazon me-2"></i> Buy on Amazon
+              </a>
+              <a href="https://wa.me/923219841780?text=I want to buy Truthful Tales Book" target="_blank" class="btn-book-whatsapp w-100">
+                <i class="fab fa-whatsapp me-2"></i> Order via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
 
-              </div>
+        <!-- Slide 3: Hayat-e-Murshid -->
+        <div class="swiper-slide">
+          <div class="card card-custom h-100 p-4 text-center d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-center mb-3" style="height: 310px;">
+              <img src="images/newbook.png" alt="Hayat-e-Murshid" class="img-fluid rounded shadow-lg" style="max-height: 300px; width: auto; object-fit: contain; margin: 0 auto;">
+            </div>
+            <span class="badge bg-warning text-dark mb-2 py-1 px-2 fw-bold align-self-center"><i class="fas fa-book"></i> Spiritual Biography</span>
+            <h4 class="text-yellow mb-2 fw-bold">Hayat-e-Murshid</h4>
+            <p class="text-light-custom mb-1 small">Price: <strong class="text-yellow">Rs. 800</strong></p>
+            <p class="text-light-custom mb-2 small"><strong class="text-yellow">Khair Publications</strong> Edition</p>
+            <p class="text-light-custom flex-grow-1 small mb-3">
+              A spiritual journey into the life, teachings, and legacy of Hazrat Pir Muhammad Siddique Bhorvi (RA).
+            </p>
+            <div class="d-flex flex-column gap-2 mt-auto pt-2">
+              <a href="https://wa.me/923219841780?text=I want to buy Hayat-e-Murshid Book" target="_blank" class="btn-book-primary w-100">
+                <i class="fas fa-shopping-cart me-2"></i> Buy Now
+              </a>
+              <a href="https://wa.me/923219841780?text=I want to buy Hayat-e-Murshid Book" target="_blank" class="btn-book-whatsapp w-100">
+                <i class="fab fa-whatsapp me-2"></i> Order via WhatsApp
+              </a>
             </div>
           </div>
         </div>
 
       </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination works-swiper-pagination"></div>
     </div>
 
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-
     <!-- Add Navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next works-swiper-next"></div>
+    <div class="swiper-button-prev works-swiper-prev"></div>
   </div>
 </section>
+
+  <!-- Featured Seminar & Events Section -->
+  <section class="py-5 my-5 position-relative overflow-hidden" id="seminar-event">
+    <div class="container position-relative">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-5 position-relative" data-aos="fade-up">
+        <h2 class="text-yellow content-title fw-bold mb-2">Events &amp; Seminars</h2>
+        <hr class="border-warning border-2 opacity-100 mx-auto mb-3" style="max-width: 180px;" />
+        <p class="text-light-custom mx-auto mb-0" style="max-width: 720px; font-size: 1.1rem;">
+          Academic conferences, heritage book presentations, and national dialogues organized by Khair Publications.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          
+          <!-- Event Spotlight Card -->
+          <div class="event-spotlight-card" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="row g-4 align-items-center">
+              
+              <!-- Poster Column -->
+              <div class="col-lg-5 col-md-12">
+                <div class="event-poster-container">
+                  <picture>
+                    <source srcset="images/seminar/optimized/irs_seminar_2026_poster.avif" type="image/avif">
+                    <source srcset="images/seminar/optimized/irs_seminar_2026_poster.webp" type="image/webp">
+                    <img src="images/seminar/optimized/irs_seminar_2026_poster-600.jpg" 
+                         srcset="images/seminar/optimized/irs_seminar_2026_poster-300.jpg 300w,
+                                 images/seminar/optimized/irs_seminar_2026_poster-600.jpg 600w,
+                                 images/seminar/optimized/irs_seminar_2026_poster-1200.jpg 1200w"
+                         sizes="(max-width: 600px) 300px,
+                                (max-width: 991px) 600px,
+                                500px"
+                         alt="Official Seminar Poster: Ideology of Pakistan and the Role of Islamic Scholars - IRS &amp; Khair Publications" 
+                         class="img-fluid" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+
+              <!-- Content Column -->
+              <div class="col-lg-7 col-md-12">
+                <span class="event-badge">
+                  <i class="fas fa-landmark"></i> National Seminar &bull; IRS Islamabad &bull; Khair Publications
+                </span>
+
+                <h2 class="text-yellow fw-bold mb-3" style="font-size: 2rem; line-height: 1.3;">
+                  Ideology of Pakistan and the Role of Islamic Scholars
+                </h2>
+
+                <ul class="event-meta-list">
+                  <li>
+                    <i class="far fa-calendar-alt"></i>
+                    <span><strong>Date &amp; Time:</strong> Wednesday, September 02, 2026 &bull; 11:30 AM</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-location-dot"></i>
+                    <span><strong>Venue:</strong> Institute of Regional Studies (IRS), Ataturk Avenue, F-5/2, Islamabad</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-handshake"></i>
+                    <span><strong>Organizers:</strong> Jointly organized by <strong>Institute of Regional Studies (IRS)</strong> &amp; <strong>Khair Publications</strong></span>
+                  </li>
+                  <li>
+                    <i class="fas fa-microphone-lines"></i>
+                    <span><strong>Keynote Address:</strong> <strong>Sahibzada Muhammad Saeed</strong> (Founder, Khair Publications) on <em>&ldquo;Role of Sufia-e-Karam &amp; Ideology of Pakistan&rdquo;</em></span>
+                  </li>
+                  <li>
+                    <i class="fas fa-book-open"></i>
+                    <span><strong>Book Presentation:</strong> Newly translated English editions of <strong>&ldquo;Sufism&rdquo;</strong> and <strong>&ldquo;Truthful Tales&rdquo;</strong> formally presented</span>
+                  </li>
+                </ul>
+
+                <div class="event-description text-light-custom" style="line-height: 1.7;">
+                  <p>
+                    At the beginning of the seminar, Sahibzada Muhammad Saeed Bhorvi, founder of Khair Publications, addressed the gathering and highlighted the objectives of the seminar and the profound significance of its theme.
+                  </p>
+                  <p class="mb-0">
+                    On this occasion, Allama Sahibzada Muhammad Masoom Bhorvi, along with distinguished religious scholars, academics, and intellectuals, participated as special guests. The speakers shared their comprehensive perspectives on the intellectual and ideological background of the creation of Pakistan and the spiritual contributions of Sufi saints in the subcontinent.
+                  </p>
+                </div>
+
+                <div class="event-actions">
+                  <a href="events.html#event-videos" class="btn-event-primary">
+                    <i class="fas fa-play"></i> Watch Event Videos
+                  </a>
+                  <a href="events.html" class="btn-event-secondary">
+                    <i class="fas fa-images"></i> Full Event Coverage &amp; Gallery &rarr;
+                  </a>
+                  <a href="https://www.thenews.pk/print/1435496-role-of-ulema-sufis-vital-to-understanding-pakistan-s-ideology" target="_blank" rel="noopener noreferrer" class="btn-event-secondary">
+                    <i class="far fa-newspaper"></i> Read on The News
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Seminar Visual Highlights Preview Grid -->
+          <div class="row g-4 mt-4">
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="seminar-photo-card">
+                <a href="events.html#photo-gallery" class="photo-link" title="View Book Launch in Gallery">
+                  <div class="seminar-photo-img-wrapper" style="height: 180px;">
+                    <picture>
+                      <source srcset="images/seminar/optimized/irs_seminar_book_launch_stage.avif" type="image/avif">
+                      <source srcset="images/seminar/optimized/irs_seminar_book_launch_stage.webp" type="image/webp">
+                      <img src="images/seminar/optimized/irs_seminar_book_launch_stage-600.jpg" 
+                           srcset="images/seminar/optimized/irs_seminar_book_launch_stage-300.jpg 300w,
+                                   images/seminar/optimized/irs_seminar_book_launch_stage-600.jpg 600w"
+                           sizes="(max-width: 600px) 300px, 400px"
+                           alt="Stage Book Launch" loading="lazy">
+                    </picture>
+                  </div>
+                </a>
+                <div class="seminar-photo-caption py-2 px-3">
+                  <strong class="small"><i class="fas fa-book-open text-yellow me-1"></i> Book Launch Stage</strong>
+                  <span class="small">Formal presentation of Sufism &amp; Truthful Tales.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="seminar-photo-card">
+                <a href="events.html#photo-gallery" class="photo-link" title="View Keynote Address in Gallery">
+                  <div class="seminar-photo-img-wrapper" style="height: 180px;">
+                    <picture>
+                      <source srcset="images/seminar/optimized/irs_seminar_speech_sms.avif" type="image/avif">
+                      <source srcset="images/seminar/optimized/irs_seminar_speech_sms.webp" type="image/webp">
+                      <img src="images/seminar/optimized/irs_seminar_speech_sms-600.jpg" 
+                           srcset="images/seminar/optimized/irs_seminar_speech_sms-300.jpg 300w,
+                                   images/seminar/optimized/irs_seminar_speech_sms-600.jpg 600w"
+                           sizes="(max-width: 600px) 300px, 400px"
+                           alt="Keynote Speech" loading="lazy">
+                    </picture>
+                  </div>
+                </a>
+                <div class="seminar-photo-caption py-2 px-3">
+                  <strong class="small"><i class="fas fa-microphone text-yellow me-1"></i> Keynote Address</strong>
+                  <span class="small">Sahibzada Muhammad Saeed addressing the seminar.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="seminar-photo-card">
+                <a href="events.html#photo-gallery" class="photo-link" title="View Audience Hall in Gallery">
+                  <div class="seminar-photo-img-wrapper" style="height: 180px;">
+                    <picture>
+                      <source srcset="images/seminar/optimized/irs_seminar_hall_audience.avif" type="image/avif">
+                      <source srcset="images/seminar/optimized/irs_seminar_hall_audience.webp" type="image/webp">
+                      <img src="images/seminar/optimized/irs_seminar_hall_audience-600.jpg" 
+                           srcset="images/seminar/optimized/irs_seminar_hall_audience-300.jpg 300w,
+                                   images/seminar/optimized/irs_seminar_hall_audience-600.jpg 600w"
+                           sizes="(max-width: 600px) 300px, 400px"
+                           alt="Audience Hall" loading="lazy">
+                    </picture>
+                  </div>
+                </a>
+                <div class="seminar-photo-caption py-2 px-3">
+                  <strong class="small"><i class="fas fa-users text-yellow me-1"></i> Seminar Hall</strong>
+                  <span class="small">Scholars, researchers, and dignitaries at IRS auditorium.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="seminar-photo-card">
+                <a href="events.html#press-coverage" class="photo-link" title="View The News Coverage">
+                  <div class="seminar-photo-img-wrapper" style="height: 180px;">
+                    <picture>
+                      <source srcset="images/seminar/optimized/the_news_article_cropped.avif" type="image/avif">
+                      <source srcset="images/seminar/optimized/the_news_article_cropped.webp" type="image/webp">
+                      <img src="images/seminar/optimized/the_news_article_cropped-600.jpg" 
+                           srcset="images/seminar/optimized/the_news_article_cropped-300.jpg 300w,
+                                   images/seminar/optimized/the_news_article_cropped-600.jpg 600w"
+                           sizes="(max-width: 600px) 300px, 400px"
+                           alt="The News International Coverage" style="object-fit: contain; background: #fff;" loading="lazy">
+                    </picture>
+                  </div>
+                </a>
+                <div class="seminar-photo-caption py-2 px-3">
+                  <strong class="small"><i class="far fa-newspaper text-yellow me-1"></i> The News Coverage</strong>
+                  <span class="small">National print media report by Rasheed Khalid.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Link to Full Events Page -->
+          <div class="text-center mt-4 pt-2">
+            <a href="events.html" class="btn btn-outline-warning px-4 py-2 rounded-pill fw-semibold">
+              <i class="fas fa-calendar-check me-2"></i> View All Photos, Videos &amp; Press Details &rarr;
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Manuscripts Section -->
 <section class="py-5 position-relative overflow-hidden mb-5" data-aos="clip-bottom" id="manuscripts" style="background-color: var(--light-bg);">
@@ -624,92 +889,42 @@
 
 <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- JQuery js -->
-  <script src="js/jquery-1.11.0.min.js"></script>
-  <!-- Plugins js -->
-  <script src="js/plugins.js"></script>
-  <!-- Script js -->
-  <script src="js/script.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery 3.6.0 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Plugins & Custom Script -->
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <script>
     AOS.init();
-    new Swiper('.servicesSwiper', {
-      loop: true,
-      pagination: { el: '.swiper-pagination', clickable: true },
-    });
-    new Swiper('.worksSwiper', {
-      loop: true,
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const navbarNav = document.getElementById("navbarNav");
+      const menuIcon = document.getElementById("menu-icon");
+      const navbarToggler = document.querySelector(".navbar-toggler");
+
+      if (navbarNav && menuIcon && navbarToggler) {
+        navbarNav.addEventListener("show.bs.collapse", () => {
+          menuIcon.classList.replace("fa-ellipsis-v", "fa-times");
+        });
+
+        navbarNav.addEventListener("hide.bs.collapse", () => {
+          menuIcon.classList.replace("fa-times", "fa-ellipsis-v");
+        });
+
+        document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+          link.addEventListener("click", () => {
+            if (window.getComputedStyle(navbarToggler).display !== "none") {
+              new bootstrap.Collapse(navbarNav).hide();
+            }
+          });
+        });
       }
     });
-    // Menu toggle
-    document.querySelector('.menu-toggle-btn')?.addEventListener('click', () => {
-      document.getElementById('fullscreenMenu')?.classList.add('active');
-    });
-    document.getElementById('closeMenuBtn')?.addEventListener('click', () => {
-      document.getElementById('fullscreenMenu')?.classList.remove('active');
-    });
   </script>
-
-<script>
-  const navbarNav = document.getElementById("navbarNav");
-  const menuIcon = document.getElementById("menu-icon");
-
-  navbarNav.addEventListener("show.bs.collapse", () => {
-    menuIcon.classList.remove("fa-ellipsis-v");
-    menuIcon.classList.add("fa-times"); // Close icon
-  });
-
-  navbarNav.addEventListener("hide.bs.collapse", () => {
-    menuIcon.classList.remove("fa-times");
-    menuIcon.classList.add("fa-ellipsis-v"); // Open icon
-  });
-</script>
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navbarNav = document.getElementById("navbarNav");
-    const menuIcon = document.getElementById("menu-icon");
-    const navbarToggler = document.querySelector(".navbar-toggler");
-
-    if (navbarNav && menuIcon && navbarToggler) {
-      // 🔄 Swap icon when open/close
-      navbarNav.addEventListener("show.bs.collapse", () => {
-        menuIcon.classList.replace("fa-ellipsis-v", "fa-times");
-      });
-
-      navbarNav.addEventListener("hide.bs.collapse", () => {
-        menuIcon.classList.replace("fa-times", "fa-ellipsis-v");
-      });
-
-      // 🔒 Auto-close when clicking a nav link
-      document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-        link.addEventListener("click", () => {
-          if (window.getComputedStyle(navbarToggler).display !== "none") {
-            new bootstrap.Collapse(navbarNav).hide();
-          }
-        });
-      });
-    }
-  });
-</script>
-
-
-
 </body>
 </html>
 
