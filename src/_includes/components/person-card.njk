@@ -3,7 +3,7 @@
 <div class="card card-custom h-100 p-4 text-center">
   {% image person.image, person.name, {
     sizes: "160px",
-    className: "person-card__avatar rounded-circle mx-auto bg-white p-1 mb-3",
+    className: "person-card__avatar rounded-circle mx-auto mb-3",
     widths: [300, 600]
   } %}
   <h3 class="card-title text-yellow h4">{{ person.name }}</h3>
@@ -20,7 +20,7 @@
 <div class="card card-custom text-center p-4">
   {% image person.image, person.name, {
     sizes: "(max-width: 767px) 90vw, 640px",
-    className: "profile-card__portrait card-img-top rounded bg-white p-1 mb-3"
+    className: "profile-card__portrait card-img-top rounded mb-3"
   } %}
   <div class="card-body">
     <h3 class="card-title fw-bold text-yellow h4">{{ person.name }}</h3>
