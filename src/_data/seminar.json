@@ -46,12 +46,12 @@
     },
     {
       "image": "the_news_article_cropped",
-      "alt": "The News International Coverage",
+      "alt": "Media Coverage",
       "icon": "far fa-newspaper",
-      "title": "The News Coverage",
+      "title": "Media Coverage",
       "caption": "National print media report by Rasheed Khalid.",
       "href": "/events.html#press-coverage",
-      "linkTitle": "View The News Coverage",
+      "linkTitle": "View Media Coverage",
       "imageStyle": "object-fit: contain; background: #fff;"
     }
   ]

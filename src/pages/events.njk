@@ -28,7 +28,7 @@ announcementCta:
   <div class="container">
     {% set eventActions = [
       { url: "#event-videos",   style: "btn-event-primary",   icon: "fas fa-play",          label: "Watch Event Videos" },
-      { url: "#press-coverage", style: "btn-event-secondary", icon: "far fa-newspaper",     label: "Read Press Coverage" },
+      { url: "#press-coverage", style: "btn-event-secondary", icon: "far fa-newspaper",     label: "Read Media Coverage" },
       { url: "#photo-gallery",  style: "btn-event-secondary", icon: "fas fa-images",        label: "Photo Gallery" },
       { url: "/store.html",     style: "btn-event-secondary", icon: "fas fa-shopping-bag",  label: "View Publications" }
     ] %}
@@ -93,7 +93,7 @@ announcementCta:
 <section class="py-5 position-relative mb-5" id="press-coverage">
   <div class="container">
     {{ sectionHeader("far fa-newspaper", "National Press",
-        "Official Media &amp; Press Coverage",
+        "Media Coverage",
         "National print media coverage documenting the joint IRS and Khair Publications seminar and the launch of our English publications.") }}
 
     <div class="row justify-content-center">
@@ -123,7 +123,7 @@ announcementCta:
 
                 <div class="d-flex flex-wrap gap-3">
                   <a href="{{ press.articleUrl }}" target="_blank" rel="noopener noreferrer" class="btn-event-primary">
-                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Read Article on The News
+                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Read Media Coverage
                   </a>
                   <a href="{{ press.fullImage }}" target="_blank" rel="noopener noreferrer" class="btn-event-secondary">
                     <i class="fas fa-search-plus" aria-hidden="true"></i> View Newspaper Clipping
