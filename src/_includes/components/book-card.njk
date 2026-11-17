@@ -38,7 +38,7 @@
       <i class="fab fa-amazon me-2" aria-hidden="true"></i> Buy on Amazon
     </a>
     {% endif %}
-    <a href="https://wa.me/{{ site.contact.ordersWhatsapp }}?text={{ book.whatsappMessage | urlencode }}"
+    <a href="https://wa.me/{{ book.ordersWhatsapp or site.contact.ordersWhatsapp }}?text={{ book.whatsappMessage | urlencode }}"
        target="_blank" rel="noopener noreferrer" class="btn-book-whatsapp w-100">
       <i class="fab fa-whatsapp me-2" aria-hidden="true"></i> Order via WhatsApp
     </a>
