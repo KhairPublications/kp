@@ -1,9 +1,9 @@
 [
   {
     "slug": "fath-e-mubeen",
-    "title": "Fath-e-Mubeen",
+    "title": "Fateh-e-Mubeen",
     "image": "/assets/images/books/fath-e-mubeen.png",
-    "imageAlt": "Fath-e-Mubeen book cover",
+    "imageAlt": "Fateh-e-Mubeen book cover",
     "badge": {
       "label": "Spiritual Biography",
       "icon": "fas fa-book"
@@ -13,7 +13,7 @@
     "description": "A spiritual biography of Hazrat Pir Fateh Muhammad Bhorvi (RA), exploring his life and legacy.",
     "year": "Spiritual Biography",
     "ordersWhatsapp": "923336095804",
-    "whatsappMessage": "I want to buy Fath-e-Mubeen Book"
+    "whatsappMessage": "I want to buy Fateh-e-Mubeen Book"
   },
   {
     "slug": "hayat-e-murshid",
