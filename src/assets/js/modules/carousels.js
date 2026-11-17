@@ -37,7 +37,8 @@ const CAROUSELS = [
     options: {
       slidesPerView: 3,
       spaceBetween: 30,
-      loop: false,
+      loop: true,
+      autoplay: SHARED_AUTOPLAY,
       pagination: { el: ".works-swiper-pagination", clickable: true },
       navigation: { nextEl: ".works-swiper-next", prevEl: ".works-swiper-prev" },
       breakpoints: {

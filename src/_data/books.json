@@ -1,19 +1,33 @@
 [
   {
-    "slug": "sufism",
-    "title": "Sufism",
-    "image": "/assets/images/books/book1.jpg",
-    "imageAlt": "Sufism - Pir Khair Muhammad Bhorvi",
+    "slug": "fath-e-mubeen",
+    "title": "Fath-e-Mubeen",
+    "image": "/assets/images/books/fath-e-mubeen.png",
+    "imageAlt": "Fath-e-Mubeen book cover",
     "badge": {
-      "label": "Presented at IRS Seminar 2026",
-      "icon": "fas fa-award"
+      "label": "Spiritual Biography",
+      "icon": "fas fa-book"
     },
-    "author": "Pir Khair Muhammad Bhorvi",
-    "translator": "Sahibzada Muhammad Saeed Bhorvi",
-    "description": "A timeless guide to self-discovery, spiritual growth, and inner peace, formally presented at the IRS Islamabad seminar.",
-    "year": "2025",
-    "amazonUrl": "https://www.amazon.com/Sufism-Pir-Khair-Muhammad-Bhorvi-ebook/dp/B0F2711Z3Y",
-    "whatsappMessage": "I want to buy Sufism Book"
+    "price": "Rs. 1000",
+    "edition": "Khair Publications",
+    "description": "A spiritual biography of Hazrat Pir Fateh Muhammad Bhorvi (RA), exploring his life and legacy.",
+    "year": "Spiritual Biography",
+    "whatsappMessage": "I want to buy Fath-e-Mubeen Book"
+  },
+  {
+    "slug": "hayat-e-murshid",
+    "title": "Hayat-e-Murshid",
+    "image": "/assets/images/books/hayat-e-murshid.png",
+    "imageAlt": "Hayat-e-Murshid",
+    "badge": {
+      "label": "Spiritual Biography",
+      "icon": "fas fa-book"
+    },
+    "price": "Rs. 800",
+    "edition": "Khair Publications",
+    "description": "A spiritual journey into the life, teachings, and legacy of Hazrat Pir Muhammad Siddique Bhorvi (RA).",
+    "year": "Spiritual Biography",
+    "whatsappMessage": "I want to buy Hayat-e-Murshid Book"
   },
   {
     "slug": "truthful-tales",
@@ -34,18 +48,19 @@
     "whatsappMessage": "I want to buy Truthful Tales Book"
   },
   {
-    "slug": "hayat-e-murshid",
-    "title": "Hayat-e-Murshid",
-    "image": "/assets/images/books/hayat-e-murshid.png",
-    "imageAlt": "Hayat-e-Murshid",
+    "slug": "sufism",
+    "title": "Sufism",
+    "image": "/assets/images/books/book1.jpg",
+    "imageAlt": "Sufism - Pir Khair Muhammad Bhorvi",
     "badge": {
-      "label": "Spiritual Biography",
-      "icon": "fas fa-book"
+      "label": "Presented at IRS Seminar 2026",
+      "icon": "fas fa-award"
     },
-    "price": "Rs. 800",
-    "edition": "Khair Publications",
-    "description": "A spiritual journey into the life, teachings, and legacy of Hazrat Pir Muhammad Siddique Bhorvi (RA).",
-    "year": "Spiritual Biography",
-    "whatsappMessage": "I want to buy Hayat-e-Murshid Book"
+    "author": "Pir Khair Muhammad Bhorvi",
+    "translator": "Sahibzada Muhammad Saeed Bhorvi",
+    "description": "A timeless guide to self-discovery, spiritual growth, and inner peace, formally presented at the IRS Islamabad seminar.",
+    "year": "2025",
+    "amazonUrl": "https://www.amazon.com/Sufism-Pir-Khair-Muhammad-Bhorvi-ebook/dp/B0F2711Z3Y",
+    "whatsappMessage": "I want to buy Sufism Book"
   }
 ]
